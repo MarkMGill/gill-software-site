@@ -1,4 +1,6 @@
 import Image from "next/image";
+import heroImage from "./hero_image.png";
+import logo from "./logo.png";
 import newHeadShot from "./new_head_shot.jpg";
 
 const navItems = ["Home", "About", "Projects", "Services", "Testimonials", "Blog"];
@@ -27,7 +29,17 @@ export default function Home() {
     <main className="bg-[#f5f8ff] text-slate-900">
       <div className="w-full bg-[#081c36] text-white">
         <header className="mx-auto flex h-20 w-full max-w-[1220px] items-center justify-between px-4 sm:px-6 lg:px-8">
-          <div className="text-[34px] font-bold tracking-tight">Mark Gill</div>
+          <a href="#home" aria-label="Mark Gill home" className="inline-flex items-center">
+            <Image
+              src={logo}
+              alt="Mark Gill logo"
+              width={108}
+              height={24}
+              style={{ borderRadius: 8 }}
+              className="h-auto w-[72px] sm:w-[86px]"
+              priority
+            />
+          </a>
           <nav className="hidden items-center gap-8 text-sm text-blue-100 lg:flex">
             {navItems.map((item) => (
               <a key={item} href={item === "Home" ? "#home" : `#${item.toLowerCase()}`} className="transition hover:text-white">
@@ -44,7 +56,7 @@ export default function Home() {
         </header>
       </div>
 
-      <section id="home" className="mx-auto w-full max-w-[1220px] px-4 pb-16 pt-14 sm:px-6 lg:px-8">
+      <section id="home" className="mx-auto w-full max-w-[1380px] px-2 pb-16 pt-14 sm:px-3 lg:px-4">
         <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Full-Stack Developer</p>
@@ -71,7 +83,7 @@ export default function Home() {
           <div className="relative rounded-[24px] border border-blue-100/70 bg-white p-3 shadow-[0_18px_50px_rgba(20,48,99,0.15)]">
             <div className="relative overflow-hidden rounded-[18px] bg-[#f6f9ff] p-4">
               <Image
-                src="/hero-devices.png"
+                src={heroImage}
                 alt="Dashboard on laptop and phone"
                 width={900}
                 height={560}
@@ -99,7 +111,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="mx-auto w-full max-w-[1220px] px-4 pb-20 sm:px-6 lg:px-8">
+      <section id="about" className="mx-auto w-full max-w-[1380px] px-2 pb-20 sm:px-3 lg:px-4">
         <div className="grid gap-8 rounded-[22px] border border-blue-100 bg-white p-6 shadow-[0_12px_34px_rgba(20,48,99,0.09)] md:grid-cols-[0.72fr_1.28fr] md:p-8 lg:p-10">
           <div className="overflow-hidden rounded-[18px] border border-blue-100 bg-[#edf5ff]">
             <Image
@@ -138,7 +150,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="w-full bg-[#081c36] py-14 text-white">
-        <div className="mx-auto flex w-full max-w-[1220px] flex-col gap-6 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
+        <div className="mx-auto flex w-full max-w-[1380px] flex-col gap-6 px-2 sm:px-3 lg:flex-row lg:items-end lg:justify-between lg:px-4">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-200">Contact</p>
             <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em]">Ready to build your next product?</h2>
