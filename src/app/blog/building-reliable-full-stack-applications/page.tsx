@@ -4,6 +4,7 @@ import Link from "next/link";
 import logo from "../../../assets/logo.png";
 import { featuredPost } from "../../../lib/posts";
 import { siteConfig } from "../../../lib/site";
+import ReadingProgress from "../../../components/reading-progress";
 
 const articleUrl = `/blog/${featuredPost.slug}`;
 
@@ -40,6 +41,7 @@ export default function ArticlePage() {
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
+      <ReadingProgress />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }} />
       <header className="bg-[#081c36] text-white">
         <div className="mx-auto flex h-20 w-full max-w-[1220px] items-center justify-between px-4 sm:px-6 lg:px-8">

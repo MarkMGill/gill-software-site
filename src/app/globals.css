@@ -53,3 +53,71 @@ a {
 .prose h2 + p {
   margin-top: 0;
 }
+
+@keyframes typewriter-blink {
+  0%, 45% {
+    opacity: 1;
+  }
+  46%, 100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  animation: typewriter-blink 0.8s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-cursor {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-reveal {
+      animation: section-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 8% cover 28%;
+    }
+
+    .service-stagger {
+      animation: card-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 24%;
+    }
+
+    .service-stagger:nth-child(2),
+    .service-stagger:nth-child(5) {
+      animation-range: entry 9% cover 28%;
+    }
+
+    .service-stagger:nth-child(3),
+    .service-stagger:nth-child(6) {
+      animation-range: entry 13% cover 32%;
+    }
+  }
+}

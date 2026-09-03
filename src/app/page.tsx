@@ -6,6 +6,8 @@ import logo from "../assets/logo.png";
 import newHeadShot from "../assets/new_head_shot.jpg";
 import screnrDemo from "../assets/screnr_demo.png";
 import writeGTDemo from "../assets/writeGTdemo4.png";
+import TypewriterHeading from "../components/typewriter-heading";
+import AnimatedMetric from "../components/animated-metric";
 import { featuredPost } from "../lib/posts";
 import { siteConfig } from "../lib/site";
 
@@ -83,6 +85,7 @@ const projects = [
       "I built a streamlined reporting dashboard that helps healthcare teams review monthly compliance and operational status by brand. The interface includes searchable, filterable data, clear status indicators, and export tools that make complex reporting easier to manage.",
     image: confluentDemo,
     alt: "Confluent Reporting brand scorecard dashboard",
+    imageClass: "scale-100",
     technologies: ["React", "Data Grids", "Reporting UX"],
   },
   {
@@ -92,6 +95,7 @@ const projects = [
       "I developed a movement-analysis experience that uses real-time pose tracking to evaluate exercise form. The application counts repetitions, scores joint angles, checks movement rules, and delivers immediate visual feedback across mobile and desktop views.",
     image: screnrDemo,
     alt: "Screnr overhead squat analysis on mobile and desktop",
+    imageClass: "scale-[1.045]",
     technologies: ["React Native", "Computer Vision", "Real-time Feedback"],
   },
   {
@@ -101,6 +105,7 @@ const projects = [
       "I created an interactive handwriting and whiteboard workspace for teaching, tutoring, and remote collaboration. It combines natural drawing tools, graph-paper canvases, zoom controls, printing, and live communication features in one focused interface.",
     image: writeGTDemo,
     alt: "Write GT digital whiteboard displaying a hand-drawn math lesson",
+    imageClass: "scale-[1.035]",
     technologies: ["Web App", "Canvas", "Real-time Collaboration"],
   },
 ];
@@ -126,12 +131,35 @@ const testimonials = [
 export default function Home() {
   const personSchema = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Mark Gill",
-    url: siteConfig.url,
-    jobTitle: "Senior Full-Stack Developer",
-    worksFor: { "@type": "Organization", name: siteConfig.name },
-    knowsAbout: ["React", "Next.js", "React Native", "Node.js", "TypeScript", "API development", "Full-stack development"],
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${siteConfig.url}/#mark-gill`,
+        name: "Mark Gill",
+        url: siteConfig.url,
+        jobTitle: "Senior Full-Stack Developer",
+        homeLocation: { "@type": "Place", name: "North Attleboro, Massachusetts" },
+        sameAs: ["https://www.linkedin.com/in/mark-gill-1705b567/"],
+        worksFor: { "@id": `${siteConfig.url}/#organization` },
+        knowsAbout: ["React", "Next.js", "React Native", "Node.js", "TypeScript", "API development", "Full-stack development"],
+      },
+      {
+        "@type": "Organization",
+        "@id": `${siteConfig.url}/#organization`,
+        name: siteConfig.name,
+        url: siteConfig.url,
+        email: "MarkMGill@yahoo.com",
+        telephone: "+1-401-575-6936",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "North Attleboro",
+          addressRegion: "MA",
+          addressCountry: "US",
+        },
+        areaServed: ["North Attleboro", "Massachusetts", "New England", "United States"],
+        sameAs: ["https://www.linkedin.com/in/mark-gill-1705b567/"],
+      },
+    ],
   };
 
   return (
@@ -170,8 +198,11 @@ export default function Home() {
         <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Full-Stack Developer</p>
+            <Link href="/north-attleboro-software-developer" className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#1b3565] transition hover:text-[#2e7afe]">
+              <span className="h-2 w-2 rounded-full bg-[#2e7afe]" /> Based in North Attleboro, Massachusetts
+            </Link>
             <h1 className="mt-5 max-w-xl text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[#0f172a] sm:text-6xl">
-              Building Reliable Software That Drives Results
+              <TypewriterHeading text="Building Reliable Software That Drives Results" />
             </h1>
             <p className="mt-6 max-w-xl text-xl leading-9 text-slate-600">
               I help businesses turn ideas into powerful web and mobile apps with clean code, scalable architecture,
@@ -183,9 +214,6 @@ export default function Home() {
                 className="rounded-lg bg-[#2e7afe] px-6 py-3 text-base font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.35)] transition hover:bg-[#1968ef]"
               >
                 View My Work
-              </a>
-              <a href="#about" className="text-base font-semibold text-[#1b3565] transition hover:text-[#2e7afe]">
-                Download Resume
               </a>
             </div>
           </div>
@@ -221,7 +249,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="mx-auto w-full max-w-[1380px] px-2 pb-20 sm:px-3 lg:px-4">
+      <section id="about" className="scroll-reveal mx-auto w-full max-w-[1380px] px-2 pb-20 sm:px-3 lg:px-4">
         <div className="grid gap-8 rounded-[22px] border border-blue-100 bg-white p-6 shadow-[0_12px_34px_rgba(20,48,99,0.09)] md:grid-cols-[0.72fr_1.28fr] md:p-8 lg:p-10">
           <div className="overflow-hidden rounded-[18px] border border-blue-100 bg-[#edf5ff]">
             <Image
@@ -237,29 +265,31 @@ export default function Home() {
             <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a]">Senior Full Stack Developer focused on real business outcomes.</h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
               I have over 5 years of professional experience building production web, mobile, and backend software.
-              My core stack is React, React Native, Next.js, Node.js, and TypeScript.
+              Based in North Attleboro, Massachusetts, I work with businesses locally, across New England, and throughout the United States. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-600">
               I have delivered startup MVPs and enterprise-grade tools, including healthcare platforms and real-time collaboration systems.
               Clients value my communication, ownership, and clean maintainable code.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
-              {[
-                ["Top Rated Plus", "Top 1% on Upwork"],
-                ["100%", "Job Success Score"],
-                ["5+", "Years experience"],
-              ].map(([value, label]) => (
-                <div key={label} className="rounded-xl bg-[#f6f9ff] p-4">
-                  <p className="text-2xl font-extrabold text-[#0f172a]">{value}</p>
-                  <p className="mt-1 text-sm text-slate-500">{label}</p>
-                </div>
-              ))}
+              <div className="rounded-xl bg-[#f6f9ff] p-4">
+                <p className="text-2xl font-extrabold text-[#0f172a]">Top Rated Plus</p>
+                <p className="mt-1 text-sm text-slate-500">Top 1% on Upwork</p>
+              </div>
+              <div className="rounded-xl bg-[#f6f9ff] p-4">
+                <p className="text-2xl font-extrabold text-[#0f172a]"><AnimatedMetric end={100} suffix="%" /></p>
+                <p className="mt-1 text-sm text-slate-500">Job Success Score</p>
+              </div>
+              <div className="rounded-xl bg-[#f6f9ff] p-4">
+                <p className="text-2xl font-extrabold text-[#0f172a]"><AnimatedMetric end={5} suffix="+" /></p>
+                <p className="mt-1 text-sm text-slate-500">Years experience</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" className="w-full bg-white py-20">
+      <section id="projects" className="scroll-reveal w-full bg-white py-20">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Selected Projects</p>
@@ -277,11 +307,11 @@ export default function Home() {
                 key={project.title}
                 className="group flex h-full flex-col overflow-hidden rounded-[20px] border border-blue-100 bg-[#f8faff] shadow-[0_12px_34px_rgba(20,48,99,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(20,48,99,0.14)]"
               >
-                <div className="aspect-[16/9] overflow-hidden border-b border-blue-100 bg-slate-900">
+                <div className="aspect-[2/1] overflow-hidden border-b border-blue-100 bg-[#eef3fa]">
                   <Image
                     src={project.image}
                     alt={project.alt}
-                    className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.02]"
+                    className={`h-full w-full object-contain object-center ${project.imageClass}`}
                     sizes="(min-width: 1024px) 33vw, 100vw"
                   />
                 </div>
@@ -303,7 +333,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="w-full bg-[#081c36] py-20 text-white">
+      <section id="services" className="scroll-reveal w-full bg-[#081c36] py-20 text-white">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
@@ -314,12 +344,13 @@ export default function Home() {
             </div>
             <p className="max-w-2xl text-lg leading-8 text-blue-100 lg:justify-self-end">
               Whether you need a new product, a focused feature, or a stronger foundation for existing software, I can step in at any stage and move the work forward.
+              I support businesses in North Attleboro and across Massachusetts, along with remote teams throughout New England and the United States.
             </p>
           </div>
 
           <div className="mt-12 grid gap-px overflow-hidden rounded-[22px] border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-3">
             {detailedServices.map((service) => (
-              <article key={service.title} className="group bg-[#0b2342] p-7 transition hover:bg-[#102d53] sm:p-8">
+              <article key={service.title} className="service-stagger group bg-[#0b2342] p-7 transition hover:bg-[#102d53] sm:p-8">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-bold tracking-[0.16em] text-blue-300">{service.number}</span>
                   <span className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-300/30 text-blue-200 transition group-hover:border-blue-300 group-hover:bg-[#2e7afe] group-hover:text-white">
@@ -357,7 +388,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="w-full bg-[#f5f8ff] py-20">
+      <section id="testimonials" className="scroll-reveal w-full bg-[#f5f8ff] py-20">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
@@ -405,7 +436,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="blog" className="w-full bg-white py-20">
+      <section id="blog" className="scroll-reveal w-full bg-white py-20">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-3xl">
@@ -458,9 +489,32 @@ export default function Home() {
             <p className="mt-4 text-lg leading-8 text-blue-100">
               Send a message with your project goals and I will help shape the best technical plan.
             </p>
+            <div className="mt-6 flex flex-col gap-3 text-blue-100 sm:flex-row sm:gap-8">
+              <Link href="/north-attleboro-software-developer" className="inline-flex items-center gap-2 transition hover:text-white">
+                <span className="font-semibold text-white">Location:</span> North Attleboro, MA
+              </Link>
+              <a href="mailto:MarkMGill@yahoo.com" className="inline-flex items-center gap-2 transition hover:text-white">
+                <span className="font-semibold text-white">Email:</span> MarkMGill@yahoo.com
+              </a>
+              <a href="tel:+14015756936" className="inline-flex items-center gap-2 transition hover:text-white">
+                <span className="font-semibold text-white">Phone:</span> 401-575-6936
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mark-gill-1705b567/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mark Gill on LinkedIn"
+                className="inline-flex items-center gap-2 transition hover:text-white"
+              >
+                <span className="font-semibold text-white">LinkedIn:</span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.47-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.04H3.54V8.98H7.1v11.47ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+                </svg>
+              </a>
+            </div>
           </div>
           <a
-            href="mailto:mark@example.com"
+            href="mailto:MarkMGill@yahoo.com"
             className="inline-flex h-12 items-center justify-center rounded-lg bg-[#2e7afe] px-6 text-base font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.45)] transition hover:bg-[#1968ef]"
           >
             Contact
