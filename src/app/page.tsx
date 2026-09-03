@@ -1,10 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import confluentDemo from "../assets/confluent_demo.png";
 import heroImage from "../assets/hero_image.png";
 import logo from "../assets/logo.png";
 import newHeadShot from "../assets/new_head_shot.jpg";
 import screnrDemo from "../assets/screnr_demo.png";
 import writeGTDemo from "../assets/writeGTdemo4.png";
+import { featuredPost } from "../lib/posts";
+import { siteConfig } from "../lib/site";
 
 const navItems = ["Home", "About", "Projects", "Services", "Testimonials", "Blog"];
 
@@ -121,8 +124,19 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Mark Gill",
+    url: siteConfig.url,
+    jobTitle: "Senior Full-Stack Developer",
+    worksFor: { "@type": "Organization", name: siteConfig.name },
+    knowsAbout: ["React", "Next.js", "React Native", "Node.js", "TypeScript", "API development", "Full-stack development"],
+  };
+
   return (
     <main className="bg-[#f5f8ff] text-slate-900">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema).replace(/</g, "\\u003c") }} />
       <div className="w-full bg-[#081c36] text-white">
         <header className="mx-auto flex h-20 w-full max-w-[1220px] items-center justify-between px-4 sm:px-6 lg:px-8">
           <a href="#home" aria-label="Mark Gill home" className="inline-flex items-center">
@@ -388,6 +402,51 @@ export default function Home() {
           </div>
 
           <p className="mt-7 text-center text-sm text-slate-500">Client feedback collected through Upwork.</p>
+        </div>
+      </section>
+
+      <section id="blog" className="w-full bg-white py-20">
+        <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-3xl">
+              <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">From the Blog</p>
+              <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
+                Practical notes on building better software
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                Lessons from developing production web, mobile, backend, and real-time applications for growing businesses.
+              </p>
+            </div>
+            <Link href="/blog" className="font-bold text-[#2e7afe] transition hover:text-[#1968ef]">
+              View all articles <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <article className="mt-12 grid overflow-hidden rounded-[22px] border border-blue-100 bg-[#f8faff] shadow-[0_12px_34px_rgba(20,48,99,0.08)] lg:grid-cols-[0.72fr_1.28fr]">
+            <div className="flex min-h-64 flex-col justify-between bg-[#0b2342] p-8 text-white sm:p-10">
+              <span className="text-sm font-bold uppercase tracking-[0.14em] text-blue-300">{featuredPost.category}</span>
+              <div className="mt-12 font-mono text-sm text-blue-100">
+                <p>React · Next.js · Node.js</p>
+                <p className="mt-2">TypeScript · APIs · Architecture</p>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium text-slate-500">
+                <time dateTime={featuredPost.publishedAt}>{featuredPost.displayDate}</time>
+                <span aria-hidden="true">·</span>
+                <span>{featuredPost.readingTime}</span>
+              </div>
+              <h3 className="mt-4 text-3xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-4xl">
+                <Link href={`/blog/${featuredPost.slug}`} className="transition hover:text-[#2e7afe]">
+                  {featuredPost.title}
+                </Link>
+              </h3>
+              <p className="mt-5 text-lg leading-8 text-slate-600">{featuredPost.description}</p>
+              <Link href={`/blog/${featuredPost.slug}`} className="mt-7 inline-flex items-center gap-2 font-bold text-[#2e7afe] transition hover:text-[#1968ef]">
+                Read the article <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </article>
         </div>
       </section>
 
