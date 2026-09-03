@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, IBM_Plex_Mono } from "next/font/google";
-import logo from "./tree_logo.png";
+import logo from "../assets/tree_logo.png";
 import "./globals.css";
 
 const manrope = Manrope({
