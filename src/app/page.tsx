@@ -8,6 +8,7 @@ import screnrDemo from "../assets/screnr_demo.png";
 import writeGTDemo from "../assets/writeGTdemo4.png";
 import TypewriterHeading from "../components/typewriter-heading";
 import AnimatedMetric from "../components/animated-metric";
+import ContactForm from "../components/contact-form";
 import { featuredPost } from "../lib/posts";
 import { siteConfig } from "../lib/site";
 
@@ -79,34 +80,34 @@ const detailedServices = [
 
 const projects = [
   {
-    title: "Confluent Reporting",
-    category: "Compliance reporting platform",
+    title: "Confluent Health Reporting",
+    category: "Healthcare reporting platform",
     description:
-      "I built a streamlined reporting dashboard that helps healthcare teams review monthly compliance and operational status by brand. The interface includes searchable, filterable data, clear status indicators, and export tools that make complex reporting easier to manage.",
+      "A streamlined, dynamic reporting dashboard that gives users a responsive interface for viewing and working with healthcare business data. The interface includes searchable, filterable data, clear status indicators, and export tools that make complex reporting easier to manage.",
     image: confluentDemo,
     alt: "Confluent Reporting brand scorecard dashboard",
     imageClass: "scale-100",
-    technologies: ["React", "Data Grids", "Reporting UX"],
+    technologies: ["React", "Express JS", "Microsoft Azure", "Data Grids", "Reporting UX"],
   },
   {
-    title: "Screnr",
-    category: "Computer-vision fitness application",
+    title: "Screnr Health",
+    category: "Video tracker fitness application",
     description:
-      "I developed a movement-analysis experience that uses real-time pose tracking to evaluate exercise form. The application counts repetitions, scores joint angles, checks movement rules, and delivers immediate visual feedback across mobile and desktop views.",
+      "A movement-analysis experience that uses real-time pose tracking and AI to evaluate exercise form. The app delivers immediate audio/visual in the mobile app to patients.  Clients and PT's can then log in to the web portal to see scores, and PT's can prescribe exercises.",
     image: screnrDemo,
     alt: "Screnr overhead squat analysis on mobile and desktop",
     imageClass: "scale-[1.045]",
-    technologies: ["React Native", "Computer Vision", "Real-time Feedback"],
+    technologies: ["React","React Native", "Express.js", "AWS", "Video Tracking", "Real-time Feedback"],
   },
   {
     title: "Write GT",
-    category: "Collaborative digital whiteboard",
+    category: "Collaborative whiteboard application",
     description:
-      "I created an interactive handwriting and whiteboard workspace for teaching, tutoring, and remote collaboration. It combines natural drawing tools, graph-paper canvases, zoom controls, printing, and live communication features in one focused interface.",
+      "An interactive handwriting and whiteboard workspace for teaching, tutoring, and remote collaboration. It combines natural drawing tools, graph-paper canvases, zoom controls, printing, video calling, and instant messaging features in one focused interface.",
     image: writeGTDemo,
     alt: "Write GT digital whiteboard displaying a hand-drawn math lesson",
     imageClass: "scale-[1.035]",
-    technologies: ["Web App", "Canvas", "Real-time Collaboration"],
+    technologies: ["Next.js", "TypeScript", "Express.js", "Digital Ocean", "Canvas", "Real-time Collaboration"],
   },
 ];
 
@@ -482,14 +483,14 @@ export default function Home() {
       </section>
 
       <section id="contact" className="w-full bg-[#081c36] py-14 text-white">
-        <div className="mx-auto flex w-full max-w-[1380px] flex-col gap-6 px-2 sm:px-3 lg:flex-row lg:items-end lg:justify-between lg:px-4">
+        <div className="mx-auto grid w-full max-w-[1380px] gap-10 px-2 sm:px-3 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-4">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-200">Contact</p>
             <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em]">Ready to build your next product?</h2>
             <p className="mt-4 text-lg leading-8 text-blue-100">
               Send a message with your project goals and I will help shape the best technical plan.
             </p>
-            <div className="mt-6 flex flex-col gap-3 text-blue-100 sm:flex-row sm:gap-8">
+            <div className="mt-6 flex flex-col flex-wrap gap-3 text-blue-100 sm:flex-row sm:gap-x-8">
               <Link href="/north-attleboro-software-developer" className="inline-flex items-center gap-2 transition hover:text-white">
                 <span className="font-semibold text-white">Location:</span> North Attleboro, MA
               </Link>
@@ -513,12 +514,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <a
-            href="mailto:MarkMGill@yahoo.com"
-            className="inline-flex h-12 items-center justify-center rounded-lg bg-[#2e7afe] px-6 text-base font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.45)] transition hover:bg-[#1968ef]"
-          >
-            Contact
-          </a>
+          <ContactForm />
         </div>
       </section>
     </main>

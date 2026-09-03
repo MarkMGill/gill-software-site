@@ -9,7 +9,7 @@ import ReadingProgress from "../../../components/reading-progress";
 const articleUrl = `/blog/${featuredPost.slug}`;
 
 export const metadata: Metadata = {
-  title: "How I Build Reliable Full-Stack Applications That Scale",
+  title: "Building Reliable Full-Stack Applications That Scale",
   description: featuredPost.description,
   keywords: ["full-stack application development", "React", "Next.js", "React Native", "Node.js", "TypeScript", "API development", "software architecture"],
   alternates: { canonical: articleUrl },

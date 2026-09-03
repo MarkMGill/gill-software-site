@@ -20,6 +20,18 @@ The homepage is defined in [src/app/page.tsx](src/app/page.tsx).
 
 This project uses `next/font` for typography.
 
+## Contact form
+
+The contact form posts to `src/app/api/contact/route.ts` and delivers mail through Resend. Copy `.env.example` to `.env.local`, create a Resend API key, and configure:
+
+```env
+RESEND_API_KEY=your_resend_api_key
+CONTACT_TO_EMAIL=MarkMGill@yahoo.com
+CONTACT_FROM_EMAIL="Gill Software Solutions <contact@your-verified-domain.com>"
+```
+
+For initial Resend testing, `Gill Software Solutions <onboarding@resend.dev>` can be used as the sender. Before production, verify your business domain in Resend and use an address on that domain. Keep the API key server-side and add the same variables to the deployment environment.
+
 ## Notes
 
 This site is currently static and does not require a backend. Add one if you want a contact form with email delivery, a blog, a CMS, authenticated client portals, or dynamic data storage.
