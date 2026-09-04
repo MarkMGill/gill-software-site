@@ -197,19 +197,19 @@ export default function Home() {
 
       <section id="home" className="mx-auto w-full max-w-[1380px] px-2 pb-16 pt-14 sm:px-3 lg:px-4">
         <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div>
+          <div className="text-center lg:text-left">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Full-Stack Developer</p>
             <Link href="/north-attleboro-software-developer" className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#1b3565] transition hover:text-[#2e7afe]">
               <span className="h-2 w-2 rounded-full bg-[#2e7afe]" /> Based in North Attleboro, Massachusetts
             </Link>
-            <h1 className="mt-5 max-w-xl text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[#0f172a] sm:text-6xl">
+            <h1 className="display-heading-large mx-auto mt-5 max-w-xl text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[#0f172a] sm:text-6xl lg:mx-0">
               <TypewriterHeading text="Building Reliable Software That Drives Results" />
             </h1>
-            <p className="mt-6 max-w-xl text-xl leading-9 text-slate-600">
+            <p className="mx-auto mt-6 max-w-xl text-xl leading-9 text-slate-600 lg:mx-0">
               I help businesses turn ideas into powerful web and mobile apps with clean code, scalable architecture,
               and great user experiences.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-8">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-8 lg:justify-start">
               <a
                 href="#projects"
                 className="rounded-lg bg-[#2e7afe] px-6 py-3 text-base font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.35)] transition hover:bg-[#1968ef]"
@@ -263,14 +263,13 @@ export default function Home() {
           </div>
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">About Mark</p>
-            <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a]">Senior Full Stack Developer focused on real business outcomes.</h2>
+            <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a]">Senior Full Stack Developer focused on real business outcomes.</h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              I have over 5 years of professional experience building production web, mobile, and backend software.
-              Based in North Attleboro, Massachusetts, I work with businesses locally, across New England, and throughout the United States. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
+              Seeing your software vision come to life doesn't have to be a rocky road. Your ideas should come to life through communication, ownership, and clean maintainable code. 
+              With over 5 years of professional experience, I've helped clients bring their designs and ideas to MVP's, and production-ready applications with a great UI/UX.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              I have delivered startup MVPs and enterprise-grade tools, including healthcare platforms and real-time collaboration systems.
-              Clients value my communication, ownership, and clean maintainable code.
+              Based in North Attleboro, Massachusetts, I work with businesses locally, across New England, and throughout the United States. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
               <div className="rounded-xl bg-[#f6f9ff] p-4">
@@ -294,7 +293,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Selected Projects</p>
-            <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
+            <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
               Software built around real-world needs
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
@@ -339,7 +338,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-300">Services</p>
-              <h2 className="mt-4 max-w-2xl text-4xl font-extrabold tracking-[-0.03em] sm:text-5xl">
+              <h2 className="display-heading mt-4 max-w-2xl text-4xl font-extrabold tracking-[-0.03em] sm:text-5xl">
                 Technical expertise from first idea to finished product
               </h2>
             </div>
@@ -394,7 +393,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Client Testimonials</p>
-              <h2 className="mt-4 max-w-2xl text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
+              <h2 className="display-heading mt-4 max-w-2xl text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
                 Trusted for the work—and the way I work
               </h2>
             </div>
@@ -404,7 +403,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 overflow-hidden rounded-[24px] border border-blue-100 bg-white shadow-[0_16px_42px_rgba(20,48,99,0.09)]">
-            <article className="grid gap-8 bg-[#0b2342] p-7 text-white sm:p-10 lg:grid-cols-[0.35fr_1.65fr] lg:gap-12 lg:p-12">
+            <article className="grid gap-4 bg-[#0b2342] p-7 text-white sm:p-10 lg:grid-cols-[0.35fr_1.65fr] lg:gap-6 lg:p-12">
               <div className="flex items-start">
                 <span className="font-serif text-7xl leading-none text-[#4a93ff]" aria-hidden="true">“</span>
               </div>
@@ -424,7 +423,7 @@ export default function Home() {
                   <div className="flex items-center">
                     <span className="text-4xl leading-none text-[#2e7afe]" aria-hidden="true">“</span>
                   </div>
-                  <blockquote className="mt-5 flex-1 text-lg font-medium leading-8 text-slate-700">{testimonial.quote}</blockquote>
+                  <blockquote className="mt-2.5 flex-1 text-lg font-medium leading-8 text-slate-700">{testimonial.quote}</blockquote>
                   <div className="mt-7 border-t border-slate-100 pt-5">
                     <p className="font-bold text-[#0f172a]">{testimonial.project}</p>
                   </div>
@@ -433,7 +432,6 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mt-7 text-center text-sm text-slate-500">Client feedback collected through Upwork.</p>
         </div>
       </section>
 
@@ -442,7 +440,7 @@ export default function Home() {
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">From the Blog</p>
-              <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
+              <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
                 Practical notes on building better software
               </h2>
               <p className="mt-5 text-lg leading-8 text-slate-600">
@@ -486,7 +484,7 @@ export default function Home() {
         <div className="mx-auto grid w-full max-w-[1380px] gap-10 px-2 sm:px-3 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-4">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-200">Contact</p>
-            <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em]">Ready to build your next product?</h2>
+            <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em]">Ready to build your next product?</h2>
             <p className="mt-4 text-lg leading-8 text-blue-100">
               Send a message with your project goals and I will help shape the best technical plan.
             </p>

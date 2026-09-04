@@ -58,7 +58,7 @@ export default function ArticlePage() {
           <div className="mx-auto max-w-[900px]">
             <Link href="/blog" className="text-sm font-bold text-[#2e7afe]">← Back to the blog</Link>
             <p className="mt-10 text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">{featuredPost.category}</p>
-            <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.04em] text-[#0f172a] sm:text-6xl">{featuredPost.title}</h1>
+            <h1 className="display-heading-large mt-4 text-4xl font-extrabold leading-tight tracking-[-0.04em] text-[#0f172a] sm:text-6xl">{featuredPost.title}</h1>
             <p className="mt-6 text-xl leading-9 text-slate-600">{featuredPost.description}</p>
             <div className="mt-8 flex flex-wrap items-center gap-3 text-sm font-medium text-slate-500">
               <span>By Mark Gill</span><span aria-hidden="true">·</span><time dateTime={featuredPost.publishedAt}>{featuredPost.displayDate}</time><span aria-hidden="true">·</span><span>{featuredPost.readingTime}</span>

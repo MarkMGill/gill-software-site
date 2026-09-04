@@ -121,3 +121,23 @@ a {
     }
   }
 }
+
+@media (max-width: 768px) {
+  .display-heading-large {
+    font-size: 3rem;
+  }
+
+  .display-heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .display-heading-large {
+    font-size: 2.4rem;
+  }
+
+  .display-heading {
+    font-size: 1.8rem;
+  }
+}

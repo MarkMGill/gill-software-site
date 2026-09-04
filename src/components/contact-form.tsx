@@ -76,13 +76,6 @@ export default function ContactForm() {
         {status.type === "loading" ? "Sending…" : "Send Message"}
       </button>
 
-      <p
-        className={`mt-4 min-h-6 text-sm ${status.type === "success" ? "text-green-700" : status.type === "error" ? "text-red-700" : "text-slate-500"}`}
-        role="status"
-        aria-live="polite"
-      >
-        {status.message || "Your information is used only to respond to your inquiry."}
-      </p>
     </form>
   );
 }

@@ -33,7 +33,7 @@ export default function BlogPage() {
 
       <section className="mx-auto w-full max-w-[1120px] px-4 py-20 sm:px-6 lg:px-8">
         <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Gill Software Solutions</p>
-        <h1 className="mt-4 text-5xl font-extrabold tracking-[-0.04em] text-[#0f172a] sm:text-6xl">Software Development Blog</h1>
+        <h1 className="display-heading-large mt-4 text-5xl font-extrabold tracking-[-0.04em] text-[#0f172a] sm:text-6xl">Software Development Blog</h1>
         <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-600">
           Practical perspectives on full-stack engineering, product development, and creating reliable software that solves real business problems.
         </p>
@@ -55,4 +55,3 @@ export default function BlogPage() {
     </main>
   );
 }
-
