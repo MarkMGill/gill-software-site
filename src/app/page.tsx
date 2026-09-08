@@ -120,7 +120,7 @@ const testimonials = [
   {
     project: "Sam - Write GT",
     quote:
-      "Our team works with React and Mark has been with us for a few months now. We went from concept mode to a Windows Desktop application that's functioning very well and more as it evolves. Mark goes above and beyond to figure out solutions, and reports them back to us when complete. Very courteous and professional, and I highly recommend him. He has a quick learning curve too!",
+      "Our team works with React and Mark has been with us for a few months now. We went from concept mode to a Windows Desktop application and website that's functioning very well and more as it evolves. Mark goes above and beyond to figure out solutions, and reports them back to us when complete. Very courteous and professional, and I highly recommend him. He has a quick learning curve too.",
   },
   {
     project: "Praveen - InterviewWorks",
@@ -251,7 +251,7 @@ export default function Home() {
       </section>
 
       <section id="about" className="scroll-reveal mx-auto w-full max-w-[1380px] px-2 pb-20 sm:px-3 lg:px-4">
-        <div className="grid gap-8 rounded-[22px] border border-blue-100 bg-white p-6 shadow-[0_12px_34px_rgba(20,48,99,0.09)] md:grid-cols-[0.72fr_1.28fr] md:p-8 lg:p-10">
+        <div className="grid gap-8 rounded-[22px] border border-blue-100 bg-white p-6 shadow-[0_12px_34px_rgba(20,48,99,0.09)] md:p-8 min-[992px]:grid-cols-[0.72fr_1.28fr] lg:p-10">
           <div className="overflow-hidden rounded-[18px] border border-blue-100 bg-[#edf5ff]">
             <Image
               src={newHeadShot}
@@ -278,7 +278,7 @@ export default function Home() {
               </div>
               <div className="rounded-xl bg-[#f6f9ff] p-4">
                 <p className="text-2xl font-extrabold text-[#0f172a]"><AnimatedMetric end={100} suffix="%" /></p>
-                <p className="mt-1 text-sm text-slate-500">Job Success Score</p>
+                <p className="mt-1 text-sm text-slate-500">Job Success Score - Upwork</p>
               </div>
               <div className="rounded-xl bg-[#f6f9ff] p-4">
                 <p className="text-2xl font-extrabold text-[#0f172a]"><AnimatedMetric end={5} suffix="+" /></p>
@@ -297,7 +297,7 @@ export default function Home() {
               Software built around real-world needs
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              A selection of products I have designed and developed across reporting, computer vision, and collaborative education.
+              A selection of applications I have developed across reporting, computer vision, and collaborative education.
             </p>
           </div>
 
@@ -403,7 +403,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 overflow-hidden rounded-[24px] border border-blue-100 bg-white shadow-[0_16px_42px_rgba(20,48,99,0.09)]">
-            <article className="grid gap-4 bg-[#0b2342] p-7 text-white sm:p-10 lg:grid-cols-[0.35fr_1.65fr] lg:gap-6 lg:p-12">
+            <article className="grid gap-4 bg-[#0b2342] p-7 text-white sm:p-10 lg:grid-cols-[0.35fr_1.65fr] lg:gap-3 lg:p-12">
               <div className="flex items-start">
                 <span className="font-serif text-7xl leading-none text-[#4a93ff]" aria-hidden="true">“</span>
               </div>
