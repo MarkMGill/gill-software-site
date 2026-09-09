@@ -62,7 +62,7 @@ export default function NorthAttleboroDeveloperPage() {
           {
             "@type": "Question",
             name: "Do you work with businesses outside North Attleboro?",
-            acceptedAnswer: { "@type": "Answer", text: "Yes. Gill Software Solutions works remotely with clients across Massachusetts, New England, and throughout the United States." },
+            acceptedAnswer: { "@type": "Answer", text: "Yes. Gill Software Solutions works remotely with clients across Massachusetts, New England, and throughout the US." },
           },
           {
             "@type": "Question",
@@ -93,7 +93,7 @@ export default function NorthAttleboroDeveloperPage() {
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-300">North Attleboro, Massachusetts</p>
           <h1 className="display-heading-large mt-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-[-0.04em] sm:text-6xl">Local full-stack software development for ambitious businesses</h1>
           <p className="mt-7 max-w-3xl text-xl leading-9 text-blue-100">
-            I&apos;m Mark Gill, a senior full-stack developer based in North Attleboro, MA. I build reliable web applications, mobile apps, APIs, and backend systems for local companies and remote teams across Massachusetts, New England, and the United States.
+            I&apos;m Mark Gill, a senior full-stack developer based in North Attleboro, MA. I build reliable web applications, mobile apps, APIs, and backend systems for local companies and remote teams across Massachusetts, New England, and throughout the US.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Link href="/#contact" className="rounded-lg bg-[#2e7afe] px-6 py-3 font-bold text-white transition hover:bg-[#1968ef]">Discuss your project</Link>
@@ -140,7 +140,7 @@ export default function NorthAttleboroDeveloperPage() {
         <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a]">Working together</h2>
         <div className="mt-9 divide-y divide-blue-100 rounded-[20px] border border-blue-100 bg-white px-6 sm:px-8">
           <div className="py-7"><h3 className="text-xl font-bold">What can you build?</h3><p className="mt-3 leading-7 text-slate-600">Custom web applications, React and Next.js platforms, React Native mobile apps, Node.js APIs, databases, real-time features, integrations, and internal business tools.</p></div>
-          <div className="py-7"><h3 className="text-xl font-bold">Do you only work with North Attleboro businesses?</h3><p className="mt-3 leading-7 text-slate-600">No. I welcome local projects while continuing to serve clients across Massachusetts, New England, and the United States through remote collaboration.</p></div>
+          <div className="py-7"><h3 className="text-xl font-bold">Do you only work with North Attleboro businesses?</h3><p className="mt-3 leading-7 text-slate-600">No. I welcome local projects while continuing to serve clients across Massachusetts, New England, and throughout the US through remote collaboration.</p></div>
           <div className="py-7"><h3 className="text-xl font-bold">Can you improve software that already exists?</h3><p className="mt-3 leading-7 text-slate-600">Yes. I can add features, solve bugs, improve performance, integrate external services, modernize legacy code, and strengthen application architecture.</p></div>
         </div>
       </section>

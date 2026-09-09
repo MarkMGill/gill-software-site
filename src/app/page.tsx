@@ -263,13 +263,13 @@ export default function Home() {
           </div>
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">About Mark</p>
-            <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a]">Senior Full Stack Developer focused on real business outcomes.</h2>
+            <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">Senior Full Stack Developer focused on real business outcomes.</h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
               Seeing your software vision come to life doesn't have to be a rocky road. Your ideas should come to life through communication, ownership, and clean maintainable code. 
               With over 5 years of professional experience, I've helped clients bring their designs and ideas to MVP's, and production-ready applications with a great UI/UX.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              Based in North Attleboro, Massachusetts, I work with businesses locally, across New England, and throughout the United States. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
+              Based in North Attleboro, Massachusetts, I work with businesses locally, across New England, and throughout the US. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
               <div className="rounded-xl bg-[#f6f9ff] p-4">
@@ -292,12 +292,12 @@ export default function Home() {
       <section id="projects" className="scroll-reveal w-full bg-white py-20">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Selected Projects</p>
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Projects</p>
             <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
               Software built around real-world needs
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              A selection of applications I have developed across reporting, computer vision, and collaborative education.
+              A selection of applications I have developed across reporting, video features, and collaborative education.
             </p>
           </div>
 
@@ -344,7 +344,7 @@ export default function Home() {
             </div>
             <p className="max-w-2xl text-lg leading-8 text-blue-100 lg:justify-self-end">
               Whether you need a new product, a focused feature, or a stronger foundation for existing software, I can step in at any stage and move the work forward.
-              I support businesses in North Attleboro and across Massachusetts, along with remote teams throughout New England and the United States.
+              I support businesses in North Attleboro and across Massachusetts, along with remote teams throughout New England and throughout the US.
             </p>
           </div>
 
@@ -394,16 +394,16 @@ export default function Home() {
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Client Testimonials</p>
               <h2 className="display-heading mt-4 max-w-2xl text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
-                Trusted for the work—and the way I work
+                Delivering software the way it should be for years
               </h2>
             </div>
             <p className="max-w-2xl text-lg leading-8 text-slate-600 lg:justify-self-end">
-              Long-term clients count on me to learn quickly, communicate clearly, adapt as requirements evolve, and deliver dependable software.
+              Long-term clients should expect clear communication, quick solutions, adapting as requirements evolve, and delivering great software.
             </p>
           </div>
 
           <div className="mt-12 overflow-hidden rounded-[24px] border border-blue-100 bg-white shadow-[0_16px_42px_rgba(20,48,99,0.09)]">
-            <article className="grid gap-4 bg-[#0b2342] p-7 text-white sm:p-10 lg:grid-cols-[0.35fr_1.65fr] lg:gap-3 lg:p-12">
+            <article className="grid gap-4 bg-[#0b2342] p-7 text-white sm:p-10 lg:grid-cols-[0.35fr_3.25fr] lg:gap-3 lg:p-12">
               <div className="flex items-start">
                 <span className="font-serif text-7xl leading-none text-[#4a93ff]" aria-hidden="true">“</span>
               </div>
