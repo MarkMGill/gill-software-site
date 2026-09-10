@@ -35,46 +35,32 @@ const services = [
 
 const detailedServices = [
   {
-    number: "01",
-    title: "Full-Stack Product Development",
+    category: "Web & full-stack",
+    title: "Turn an idea into a working product.",
     description:
-      "I take products from early requirements through architecture, development, testing, and launch, creating cohesive experiences across the interface, server, and database.",
-    deliverables: ["MVPs and new products", "Feature development", "Production-ready code"],
+      "Custom web applications built around the way your business works. From customer portals to internal tools, every layer comes together: interface, backend, and database.",
+    examples: "MVPs · Dashboards · Customer portals",
   },
   {
-    number: "02",
-    title: "Web Application Development",
+    category: "Mobile apps",
+    title: "Put your product in people's hands.",
     description:
-      "I build fast, responsive web applications and internal platforms with React, Next.js, and TypeScript, focusing on usability, accessibility, and maintainable components.",
-    deliverables: ["Responsive interfaces", "Dashboards and portals", "Complex interactive tools"],
+      "Connected experiences for iOS and Android with React Native. Bring the features your users need to mobile, with thoughtful interfaces and the backend to support them.",
+    examples: "iOS & Android · Device features · API integration",
   },
   {
-    number: "03",
-    title: "Mobile Application Development",
+    category: "Integrations & improvements",
+    title: "Make existing software work better.",
     description:
-      "I create cross-platform iOS and Android applications with React Native, connecting polished mobile experiences to reliable backend services and device capabilities.",
-    deliverables: ["React Native apps", "iOS and Android delivery", "Mobile API integration"],
+      "Slow workflows, disconnected systems, and stubborn bugs don't have to stay that way. Add useful features, connect external services, and improve performance without starting over.",
+    examples: "New features · Third-party integrations · Modernization",
   },
   {
-    number: "04",
-    title: "APIs & Backend Systems",
+    category: "Technical direction",
+    title: "Know what to build next, and how.",
     description:
-      "I develop secure Node.js APIs, business logic, database integrations, and real-time services designed to perform reliably as products and user demand grow.",
-    deliverables: ["REST API development", "Database design", "Authentication and permissions"],
-  },
-  {
-    number: "05",
-    title: "Architecture & Technical Strategy",
-    description:
-      "I turn business requirements into practical technical plans, choose the right tools, and structure applications for clean ownership, dependable releases, and future growth.",
-    deliverables: ["System architecture", "Technical roadmaps", "Code and stack evaluation"],
-  },
-  {
-    number: "06",
-    title: "Integrations & Modernization",
-    description:
-      "I connect third-party services, improve existing applications, resolve difficult bugs, and modernize legacy code without losing sight of day-to-day business needs.",
-    deliverables: ["Third-party integrations", "Performance improvements", "Refactoring and maintenance"],
+      "Get a practical plan before committing to the build. Architecture reviews, code assessments, and clear technical priorities help turn a broad goal into manageable next steps.",
+    examples: "Architecture · Code reviews · Technical roadmaps",
   },
 ];
 
@@ -333,57 +319,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="scroll-reveal w-full bg-[#081c36] py-20 text-white">
-        <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-300">Services</p>
-              <h2 className="display-heading mt-4 max-w-2xl text-4xl font-extrabold tracking-[-0.03em] sm:text-5xl">
-                Technical expertise from first idea to finished product
-              </h2>
-            </div>
-            <p className="max-w-2xl text-lg leading-8 text-blue-100 lg:justify-self-end">
-              Whether you need a new product, a focused feature, or a stronger foundation for existing software, I can step in at any stage and move the work forward.
-              I support businesses in North Attleboro and across Massachusetts, along with remote teams throughout New England and throughout the US.
+      <section id="services" aria-labelledby="services-heading" className="scroll-reveal w-full bg-[#081c36] py-20 text-white lg:py-24">
+        <div className="mx-auto grid w-full max-w-[1380px] gap-12 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-4">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-300">Services</p>
+            <h2 id="services-heading" className="display-heading mt-5 max-w-lg text-4xl font-extrabold leading-[1.12] tracking-[-0.03em] sm:text-5xl">
+              New ideas.<br />
+              Better software.<br />
+              <span className="text-blue-300">A clear way forward.</span>
+            </h2>
+            <p className="mt-6 max-w-md text-lg leading-8 text-blue-100/80">
+              Launch something new or improve what you already have. Get hands-on development and practical technical guidance, shaped around your project.
+            </p>
+            <a
+              href="#contact"
+              className="mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-lg bg-[#2e7afe] px-6 py-3 font-semibold text-white transition hover:bg-[#1968ef] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
+            >
+              Let’s talk about your project
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+            <p className="mt-6 max-w-sm text-sm leading-6 text-blue-200/70">
+              Based in North Attleboro, Massachusetts.<br />
+              Working with teams across New England and the US.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden rounded-[22px] border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="border-t border-white/15">
             {detailedServices.map((service) => (
-              <article key={service.title} className="service-stagger group bg-[#0b2342] p-7 transition hover:bg-[#102d53] sm:p-8">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold tracking-[0.16em] text-blue-300">{service.number}</span>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-300/30 text-blue-200 transition group-hover:border-blue-300 group-hover:bg-[#2e7afe] group-hover:text-white">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                      <path d="M5 15 15 5M8 5h7v7" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-                <h3 className="mt-7 text-2xl font-bold tracking-[-0.02em]">{service.title}</h3>
-                <p className="mt-4 leading-7 text-blue-100/80">{service.description}</p>
-                <ul className="mt-6 space-y-3 border-t border-white/10 pt-5">
-                  {service.deliverables.map((deliverable) => (
-                    <li key={deliverable} className="flex items-center gap-3 text-sm font-medium text-blue-50">
-                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#4a93ff]" />
-                      {deliverable}
-                    </li>
-                  ))}
-                </ul>
+              <article key={service.category} className="border-b border-white/15 py-7 first:pt-7 lg:py-8">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-300">{service.category}</p>
+                <h3 className="mt-3 text-2xl font-bold leading-snug tracking-[-0.02em] sm:text-[1.65rem]">{service.title}</h3>
+                <p className="mt-3 max-w-2xl leading-7 text-blue-100/80">{service.description}</p>
+                <p className="mt-4 text-sm font-medium leading-6 text-blue-200">{service.examples}</p>
               </article>
             ))}
-          </div>
-
-          <div className="mt-10 flex flex-col gap-5 rounded-[18px] border border-blue-300/20 bg-white/[0.06] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
-            <div>
-              <h3 className="text-xl font-bold">Have a project that does not fit neatly into a category?</h3>
-              <p className="mt-2 text-blue-100/80">Tell me what you are trying to accomplish, and I will help identify the right approach.</p>
-            </div>
-            <a
-              href="#contact"
-              className="inline-flex h-12 shrink-0 items-center justify-center rounded-lg bg-[#2e7afe] px-6 font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.35)] transition hover:bg-[#1968ef]"
-            >
-              Discuss Your Project
-            </a>
           </div>
         </div>
       </section>
