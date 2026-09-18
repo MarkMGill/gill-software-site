@@ -181,7 +181,7 @@ export default function Home() {
         </header>
       </div>
 
-      <section id="home" className="mx-auto w-full max-w-[1380px] px-2 pb-16 pt-14 sm:px-3 lg:px-4">
+      <section id="home" className="mx-auto w-full max-w-[1380px] px-2 pb-16 pt-14 max-[576px]:pb-[3.2rem] sm:px-3 lg:px-4">
         <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="text-center lg:text-left">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Full-Stack Developer</p>
@@ -191,7 +191,7 @@ export default function Home() {
             <h1 className="display-heading-large mx-auto mt-5 max-w-xl text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[#0f172a] sm:text-6xl lg:mx-0">
               <TypewriterHeading text="Building Reliable Software That Drives Results" />
             </h1>
-            <p className="mx-auto mt-6 max-w-xl text-xl leading-9 text-slate-600 lg:mx-0">
+            <p className="mx-auto mt-6 max-w-xl text-xl leading-9 text-slate-600 max-[576px]:text-[1.125rem] max-[576px]:leading-[1.9125rem] lg:mx-0">
               Turn ideas into powerful web and mobile apps with clean code, scalable architecture,
               and great user experiences.
             </p>
@@ -236,7 +236,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="scroll-reveal mx-auto w-full max-w-[1380px] px-2 pb-20 sm:px-3 lg:px-4">
+      <section id="about" className="scroll-reveal mx-auto w-full max-w-[1380px] px-2 pb-20 max-[576px]:pb-16 sm:px-3 lg:px-4">
         <div className="grid gap-8 rounded-[22px] border border-blue-100 bg-white p-6 shadow-[0_12px_34px_rgba(20,48,99,0.09)] md:p-8 min-[992px]:grid-cols-[0.72fr_1.28fr] lg:p-10">
           <div className="overflow-hidden rounded-[18px] border border-blue-100 bg-[#edf5ff]">
             <Image
@@ -250,11 +250,11 @@ export default function Home() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">About Mark</p>
             <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">Senior Full Stack Developer focused on real business outcomes.</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
+            <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
               Seeing your software vision come to life doesn't have to be a rocky road. Your ideas should come to life through communication, ownership, and clean maintainable code. 
               With over 5 years of professional experience, I've helped clients bring their designs and ideas to MVP's, and production-ready applications with a great UI/UX.
             </p>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
+            <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
               Based in North Attleboro, Massachusetts, I work with businesses locally, across New England, and throughout the US. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
@@ -275,19 +275,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="scroll-reveal w-full bg-white py-20">
+      <section id="projects" className="scroll-reveal w-full bg-white py-20 max-[576px]:py-16">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Projects</p>
             <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
               Software built around real-world needs
             </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
+            <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
               A selection of applications I have developed across reporting, video features, and collaborative education.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+          <div className="mt-12 grid gap-8 max-[576px]:mt-[2.4rem] lg:grid-cols-3">
             {projects.map((project) => (
               <article
                 key={project.title}
@@ -319,7 +319,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" aria-labelledby="services-heading" className="scroll-reveal w-full bg-[#081c36] py-20 text-white lg:py-24">
+      <section id="services" aria-labelledby="services-heading" className="scroll-reveal w-full bg-[#081c36] py-20 text-white max-[576px]:py-16 lg:py-24">
         <div className="mx-auto grid w-full max-w-[1380px] gap-12 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-4">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-300">Services</p>
@@ -328,7 +328,7 @@ export default function Home() {
               Better software.<br />
               <span className="text-blue-300">A clear way forward.</span>
             </h2>
-            <p className="mt-6 max-w-md text-lg leading-8 text-blue-100/80">
+            <p className="mt-6 max-w-md text-lg leading-8 text-blue-100/80 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
               Launch something new or improve what you already have. Get hands-on development and practical technical guidance, shaped around your project.
             </p>
             <a
@@ -359,21 +359,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="scroll-reveal w-full bg-[#f5f8ff] py-20">
+      <section id="testimonials" className="scroll-reveal w-full bg-[#f5f8ff] py-20 max-[576px]:py-16">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div className="grid gap-8 max-[576px]:gap-[1.6rem] lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Client Testimonials</p>
               <h2 className="display-heading mt-4 max-w-2xl text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
                 Delivering software the way it should be for years
               </h2>
             </div>
-            <p className="max-w-2xl text-lg leading-8 text-slate-600 lg:justify-self-end">
+            <p className="max-w-2xl text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem] lg:justify-self-end">
               Long-term clients should expect clear communication, quick solutions, adapting as requirements evolve, and delivering great software.
             </p>
           </div>
 
-          <div className="mt-12 overflow-hidden rounded-[24px] border border-blue-100 bg-white shadow-[0_16px_42px_rgba(20,48,99,0.09)]">
+          <div className="mt-12 overflow-hidden rounded-[24px] border border-blue-100 bg-white shadow-[0_16px_42px_rgba(20,48,99,0.09)] max-[576px]:mt-[2.4rem]">
             <article className="grid gap-4 bg-[#0b2342] p-7 text-white sm:p-10 lg:grid-cols-[0.35fr_3.25fr] lg:gap-3 lg:p-12">
               <div className="flex items-start">
                 <span className="font-serif text-7xl leading-none text-[#4a93ff]" aria-hidden="true">“</span>
@@ -406,7 +406,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="blog" className="scroll-reveal w-full bg-white py-20">
+      <section id="blog" className="scroll-reveal w-full bg-white py-20 max-[576px]:py-16">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-3xl">
@@ -414,7 +414,7 @@ export default function Home() {
               <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
                 Practical notes on building better software
               </h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600">
+              <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
                 Lessons from developing production web, mobile, backend, and real-time applications for growing businesses.
               </p>
             </div>
@@ -442,7 +442,7 @@ export default function Home() {
                   {featuredPost.title}
                 </Link>
               </h3>
-              <p className="mt-5 text-lg leading-8 text-slate-600">{featuredPost.description}</p>
+              <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">{featuredPost.description}</p>
               <Link href={`/blog/${featuredPost.slug}`} className="mt-7 inline-flex items-center gap-2 font-bold text-[#2e7afe] transition hover:text-[#1968ef]">
                 Read the article <span aria-hidden="true">→</span>
               </Link>
@@ -451,12 +451,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="w-full bg-[#081c36] py-14 text-white">
+      <section id="contact" className="w-full bg-[#081c36] py-14 text-white max-[576px]:pt-[2.8rem]">
         <div className="mx-auto grid w-full max-w-[1380px] gap-10 px-2 sm:px-3 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-4">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-200">Contact</p>
             <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em]">Ready to build your next product?</h2>
-            <p className="mt-4 text-lg leading-8 text-blue-100">
+            <p className="mt-4 text-lg leading-8 text-blue-100 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
               Send a message with your project goals and I will help shape the best technical plan.
             </p>
             <div className="mt-6 flex flex-col flex-wrap gap-3 text-blue-100 sm:flex-row sm:gap-x-8">
