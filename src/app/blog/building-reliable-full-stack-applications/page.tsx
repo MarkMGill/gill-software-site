@@ -92,7 +92,7 @@ export default function ArticlePage() {
             React Native lets me apply the same product thinking and TypeScript discipline to iOS and Android applications. Shared concepts between a web platform and mobile app can remain consistent, while each interface still respects the expectations of its device. I work with navigation, API integration, device capabilities, responsive layouts, and real-time feedback to create mobile experiences that feel focused rather than like compressed websites.
           </p>
           <p>
-            In movement-analysis work, for example, the interface must coordinate camera input, pose tracking, repetition counting, performance scoring, and immediate coaching feedback. That kind of feature requires careful state management and a clear boundary between computer-vision processing, business rules, and the user interface.
+            The best mobile experiences are built around the moments that matter most to the user. By keeping interactions simple, feedback immediate, and application state predictable, even complex workflows can feel natural on a small screen. The underlying architecture should support that clarity without exposing its complexity to the person using the app.
           </p>
 
           <h2>Design Node.js APIs and backend systems for change</h2>
@@ -127,7 +127,7 @@ export default function ArticlePage() {
             That combination of full-stack execution and product ownership is especially useful for teams that need one developer to connect the pieces. I can move from a React component to a Node.js service, investigate a database issue, improve a React Native workflow, or map out the next stage of the architecture while keeping the business objective in view.
           </p>
 
-          <h2>What I can help you build</h2>
+          <h2>What can I help you build?</h2>
           <p>
             I help businesses with full-stack product development, responsive web applications, iOS and Android apps with React Native, Node.js APIs, database design, real-time features, third-party integrations, application modernization, debugging, and ongoing feature development. The result should be more than working code: it should be a product your users understand and your team can continue to improve.
           </p>

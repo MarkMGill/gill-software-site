@@ -140,7 +140,7 @@ export default function NorthAttleboroDeveloperPage() {
         <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a]">Working together</h2>
         <div className="mt-9 divide-y divide-blue-100 rounded-[20px] border border-blue-100 bg-white px-6 sm:px-8">
           <div className="py-7"><h3 className="text-xl font-bold">What can you build?</h3><p className="mt-3 leading-7 text-slate-600">Custom web applications, React and Next.js platforms, React Native mobile apps, Node.js APIs, databases, real-time features, integrations, and internal business tools.</p></div>
-          <div className="py-7"><h3 className="text-xl font-bold">Do you only work with North Attleboro businesses?</h3><p className="mt-3 leading-7 text-slate-600">No. I welcome local projects while continuing to serve clients across Massachusetts, New England, and throughout the US through remote collaboration.</p></div>
+          <div className="py-7"><h3 className="text-xl font-bold">Do you only work with North Attleboro businesses?</h3><p className="mt-3 leading-7 text-slate-600">No. I welcome local projects while continuing to serve clients across Massachusetts, New England, and the US through remote collaboration.</p></div>
           <div className="py-7"><h3 className="text-xl font-bold">Can you improve software that already exists?</h3><p className="mt-3 leading-7 text-slate-600">Yes. I can add features, solve bugs, improve performance, integrate external services, modernize legacy code, and strengthen application architecture.</p></div>
         </div>
       </section>

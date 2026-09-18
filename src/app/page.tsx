@@ -192,7 +192,7 @@ export default function Home() {
               <TypewriterHeading text="Building Reliable Software That Drives Results" />
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-xl leading-9 text-slate-600 lg:mx-0">
-              I help businesses turn ideas into powerful web and mobile apps with clean code, scalable architecture,
+              Turn ideas into powerful web and mobile apps with clean code, scalable architecture,
               and great user experiences.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-8 lg:justify-start">
