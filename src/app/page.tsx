@@ -181,58 +181,113 @@ export default function Home() {
         </header>
       </div>
 
-      <section id="home" className="mx-auto w-full max-w-[1380px] px-2 pb-16 pt-14 max-[576px]:pb-[3.2rem] sm:px-3 lg:px-4">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="text-center lg:text-left">
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Full-Stack Developer</p>
-            <Link href="/north-attleboro-software-developer" className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#1b3565] transition hover:text-[#2e7afe]">
-              <span className="h-2 w-2 rounded-full bg-[#2e7afe]" /> Based in North Attleboro, Massachusetts
-            </Link>
-            <h1 className="display-heading-large mx-auto mt-5 max-w-xl text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[#0f172a] sm:text-6xl lg:mx-0">
-              <TypewriterHeading text="Building Reliable Software That Drives Results" />
-            </h1>
-            <p className="mx-auto mt-6 max-w-xl text-xl leading-9 text-slate-600 max-[576px]:text-[1.125rem] max-[576px]:leading-[1.9125rem] lg:mx-0">
-              Turn ideas into powerful web and mobile apps with clean code, scalable architecture,
-              and great user experiences.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-8 lg:justify-start">
-              <a
-                href="#projects"
-                className="rounded-lg bg-[#2e7afe] px-6 py-3 text-base font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.35)] transition hover:bg-[#1968ef]"
-              >
-                View My Work
-              </a>
-            </div>
-          </div>
-
-          <div className="relative rounded-[24px] border border-blue-100/70 bg-white p-3 shadow-[0_18px_50px_rgba(20,48,99,0.15)]">
-            <div className="relative overflow-hidden rounded-[18px] bg-[#f6f9ff] p-4">
-              <Image
-                src={heroImage}
-                alt="Dashboard on laptop and phone"
-                width={900}
-                height={560}
-                className="h-auto w-full"
-                priority
-              />
-            </div>
-          </div>
+      <section id="home" className="relative isolate overflow-hidden bg-[#081c36] pb-16 pt-12 text-white max-[576px]:pb-[3.2rem] sm:pt-16 lg:pt-20">
+        <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+          <div className="absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#2e7afe]/20 blur-3xl" />
+          <div className="absolute -right-24 top-0 h-[30rem] w-[30rem] rounded-full bg-cyan-400/10 blur-3xl" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:52px_52px] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
         </div>
 
-        <div className="mt-14 grid gap-5 rounded-[18px] border border-blue-100 bg-white px-5 py-7 shadow-[0_10px_30px_rgba(15,23,42,0.06)] sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
-            <article key={service.title} className="flex items-start gap-3">
-              <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#2e7afe]">
-                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                  <path d="M4 10h12M10 4v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                </svg>
+        <div className="mx-auto w-full max-w-[1380px] px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:gap-12 xl:gap-20">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-blue-300/25 bg-blue-300/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-200">
+                <span className="h-2 w-2 rounded-full bg-[#4a93ff] shadow-[0_0_14px_rgba(74,147,255,0.9)]" />
+                Full-Stack Developer
               </div>
-              <div>
-                <h3 className="text-base font-semibold text-slate-900">{service.title}</h3>
-                <p className="mt-1 text-sm text-slate-500">{service.description}</p>
+              <Link href="/north-attleboro-software-developer" className="mx-auto mt-4 flex w-fit items-center gap-2 text-sm font-semibold text-blue-100/75 transition hover:text-white lg:mx-0">
+                Based in North Attleboro, Massachusetts
+                <span aria-hidden="true">↗</span>
+              </Link>
+              <h1 className="display-heading-large mx-auto mt-6 max-w-2xl text-5xl font-extrabold leading-[1.02] tracking-[-0.04em] text-white sm:text-6xl lg:mx-0">
+                <TypewriterHeading text="Building Reliable Software That Drives Results" />
+              </h1>
+              <p className="mx-auto mt-7 max-w-xl text-xl leading-9 text-blue-100/80 max-[576px]:text-[1.125rem] max-[576px]:leading-[1.9125rem] lg:mx-0">
+                Turn ideas into powerful web and mobile apps with clean code, scalable architecture,
+                and great user experiences.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+                <a
+                  href="#projects"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#2e7afe] px-6 py-3 text-base font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.4)] transition hover:-translate-y-0.5 hover:bg-[#4a93ff]"
+                >
+                  View My Work <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-white transition hover:border-white/35 hover:bg-white/10"
+                >
+                  Start a Conversation
+                </a>
               </div>
-            </article>
-          ))}
+              <div className="mt-9 flex items-center justify-center gap-6 text-left lg:justify-start">
+                <div>
+                  <p className="text-2xl font-extrabold text-white">5+</p>
+                  <p className="text-xs font-medium text-blue-200/70">Years building</p>
+                </div>
+                <div className="h-9 w-px bg-white/15" />
+                <div>
+                  <p className="text-2xl font-extrabold text-white">Top 1%</p>
+                  <p className="text-xs font-medium text-blue-200/70">Upwork talent</p>
+                </div>
+                <div className="h-9 w-px bg-white/15" />
+                <div>
+                  <p className="text-2xl font-extrabold text-white">100%</p>
+                  <p className="text-xs font-medium text-blue-200/70">Job success</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-3xl lg:mx-0">
+              <div className="absolute -inset-5 rounded-[36px] bg-gradient-to-br from-[#2e7afe]/25 via-transparent to-cyan-300/15 blur-2xl" aria-hidden="true" />
+              <div className="relative overflow-hidden rounded-[26px] border border-white/15 bg-white/10 p-2.5 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm transition duration-500 lg:rotate-[1deg] lg:hover:rotate-0">
+                <div className="flex h-10 items-center justify-between rounded-t-[18px] border-b border-slate-200 bg-white px-4">
+                  <div className="flex gap-1.5" aria-hidden="true">
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                  </div>
+                  <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-slate-400">Built for the real world</span>
+                  <span className="h-2 w-8 rounded-full bg-slate-100" aria-hidden="true" />
+                </div>
+                <div className="overflow-hidden rounded-b-[18px] bg-[#f6f9ff] p-3 sm:p-5">
+                  <Image
+                    src={heroImage}
+                    alt="Dashboard on laptop and phone"
+                    width={900}
+                    height={560}
+                    className="h-auto w-full"
+                    priority
+                  />
+                </div>
+              </div>
+              <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-xl border border-blue-100 bg-white px-4 py-3 text-left text-slate-900 shadow-[0_16px_36px_rgba(0,0,0,0.22)] sm:left-8">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="m5 10 3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p className="text-sm font-bold">Production-ready</p>
+                  <p className="text-xs text-slate-500">From idea to launch</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-20 grid overflow-hidden rounded-[20px] border border-white/10 bg-white shadow-[0_18px_50px_rgba(0,0,0,0.2)] sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service, index) => (
+              <article key={service.title} className="group flex items-start gap-3 border-blue-100 p-5 transition hover:bg-blue-50/70 sm:[&:nth-child(odd)]:border-r lg:border-r lg:last:border-r-0">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#eaf2ff] font-mono text-xs font-bold text-[#2e7afe] transition group-hover:bg-[#2e7afe] group-hover:text-white">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-1 text-sm text-slate-500">{service.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
