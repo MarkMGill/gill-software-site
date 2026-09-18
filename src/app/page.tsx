@@ -181,7 +181,7 @@ export default function Home() {
         </header>
       </div>
 
-      <section id="home" className="relative isolate overflow-hidden bg-[#081c36] pb-16 pt-12 text-white max-[576px]:pb-[3.2rem] sm:pt-16 lg:pt-20">
+      <section id="home" className="relative isolate overflow-hidden bg-[#081c36] pb-20 pt-12 text-white max-[576px]:pb-[3.2rem] sm:pt-16 lg:pt-20">
         <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
           <div className="absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#2e7afe]/20 blur-3xl" />
           <div className="absolute -right-24 top-0 h-[30rem] w-[30rem] rounded-full bg-cyan-400/10 blur-3xl" />
@@ -291,7 +291,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="scroll-reveal mx-auto w-full max-w-[1380px] px-2 pb-20 max-[576px]:pb-16 sm:px-3 lg:px-4">
+      <section id="about" className="scroll-reveal mx-auto w-full max-w-[1380px] px-2 pb-20 pt-20 max-[576px]:pb-16 max-[576px]:pt-[4.8rem] sm:px-3 lg:px-4">
         <div className="grid gap-8 rounded-[22px] border border-blue-100 bg-white p-6 shadow-[0_12px_34px_rgba(20,48,99,0.09)] md:p-8 min-[992px]:grid-cols-[0.72fr_1.28fr] lg:p-10">
           <div className="overflow-hidden rounded-[18px] border border-blue-100 bg-[#edf5ff]">
             <Image
