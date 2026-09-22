@@ -73,10 +73,10 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL || "MarkMGill@yahoo.com";
+  const to = process.env.CONTACT_TO_EMAIL || "info@gillsoftwaresolutions.com";
   const from = process.env.CONTACT_FROM_EMAIL || "Gill Software Solutions <onboarding@resend.dev>";
   if (!apiKey) {
-    return Response.json({ message: "Email delivery is not configured yet. Please email MarkMGill@yahoo.com directly." }, { status: 503 });
+    return Response.json({ message: "Email delivery is not configured yet. Please email info@gillsoftwaresolutions.com directly." }, { status: 503 });
   }
 
   const safeName = escapeHtml(name);
@@ -100,12 +100,12 @@ export async function POST(request: Request) {
 
     if (!response.ok) {
       console.error("Contact email provider error", response.status, await response.text());
-      return Response.json({ message: "Your message could not be sent. Please email MarkMGill@yahoo.com directly." }, { status: 502 });
+      return Response.json({ message: "Your message could not be sent. Please email info@gillsoftwaresolutions.com directly." }, { status: 502 });
     }
 
     return Response.json({ message: "Thanks! Your message has been sent." });
   } catch (error) {
     console.error("Contact email delivery failed", error);
-    return Response.json({ message: "Your message could not be sent. Please email MarkMGill@yahoo.com directly." }, { status: 502 });
+    return Response.json({ message: "Your message could not be sent. Please email info@gillsoftwaresolutions.com directly." }, { status: 502 });
   }
 }

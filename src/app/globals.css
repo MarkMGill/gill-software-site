@@ -122,6 +122,16 @@ a {
   }
 }
 
+@media (768px < width <= 1024px) {
+  #home .display-heading-large {
+    font-size: 3.1875rem;
+  }
+
+  :is(#about, #projects, #services, #testimonials, #blog) .display-heading {
+    font-size: 2.55rem;
+  }
+}
+
 @media (max-width: 768px) {
   .display-heading-large {
     font-size: 3rem;
@@ -129,6 +139,16 @@ a {
 
   .display-heading {
     font-size: 2.4rem;
+  }
+}
+
+@media (639px < width <= 768px) {
+  #home .display-heading-large {
+    font-size: 2.55rem;
+  }
+
+  :is(#about, #projects, #services, #testimonials, #blog) .display-heading {
+    font-size: 2.04rem;
   }
 }
 

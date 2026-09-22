@@ -35,46 +35,32 @@ const services = [
 
 const detailedServices = [
   {
-    number: "01",
-    title: "Full-Stack Product Development",
+    category: "Web & full-stack",
+    title: "Turn an idea into a working product.",
     description:
-      "I take products from early requirements through architecture, development, testing, and launch, creating cohesive experiences across the interface, server, and database.",
-    deliverables: ["MVPs and new products", "Feature development", "Production-ready code"],
+      "Custom web applications built around the way your business works. From customer portals to internal tools, every layer comes together: interface, backend, and database.",
+    examples: "MVPs · Dashboards · Customer portals",
   },
   {
-    number: "02",
-    title: "Web Application Development",
+    category: "Mobile apps",
+    title: "Put your product in people's hands.",
     description:
-      "I build fast, responsive web applications and internal platforms with React, Next.js, and TypeScript, focusing on usability, accessibility, and maintainable components.",
-    deliverables: ["Responsive interfaces", "Dashboards and portals", "Complex interactive tools"],
+      "Connected experiences for iOS and Android with React Native. Bring the features your users need to mobile, with thoughtful interfaces and the backend to support them.",
+    examples: "iOS & Android · Device features · API integration",
   },
   {
-    number: "03",
-    title: "Mobile Application Development",
+    category: "Integrations & improvements",
+    title: "Make existing software work better.",
     description:
-      "I create cross-platform iOS and Android applications with React Native, connecting polished mobile experiences to reliable backend services and device capabilities.",
-    deliverables: ["React Native apps", "iOS and Android delivery", "Mobile API integration"],
+      "Slow workflows, disconnected systems, and stubborn bugs don't have to stay that way. Add useful features, connect external services, and improve performance without starting over.",
+    examples: "New features · Third-party integrations · Modernization",
   },
   {
-    number: "04",
-    title: "APIs & Backend Systems",
+    category: "Technical direction",
+    title: "Know what to build next, and how.",
     description:
-      "I develop secure Node.js APIs, business logic, database integrations, and real-time services designed to perform reliably as products and user demand grow.",
-    deliverables: ["REST API development", "Database design", "Authentication and permissions"],
-  },
-  {
-    number: "05",
-    title: "Architecture & Technical Strategy",
-    description:
-      "I turn business requirements into practical technical plans, choose the right tools, and structure applications for clean ownership, dependable releases, and future growth.",
-    deliverables: ["System architecture", "Technical roadmaps", "Code and stack evaluation"],
-  },
-  {
-    number: "06",
-    title: "Integrations & Modernization",
-    description:
-      "I connect third-party services, improve existing applications, resolve difficult bugs, and modernize legacy code without losing sight of day-to-day business needs.",
-    deliverables: ["Third-party integrations", "Performance improvements", "Refactoring and maintenance"],
+      "Get a practical plan before committing to the build. Architecture reviews, code assessments, and clear technical priorities help turn a broad goal into manageable next steps.",
+    examples: "Architecture · Code reviews · Technical roadmaps",
   },
 ];
 
@@ -149,7 +135,7 @@ export default function Home() {
         "@id": `${siteConfig.url}/#organization`,
         name: siteConfig.name,
         url: siteConfig.url,
-        email: "MarkMGill@yahoo.com",
+        email: "info@gillsoftwaresolutions.com",
         telephone: "+1-401-575-6936",
         address: {
           "@type": "PostalAddress",
@@ -195,62 +181,117 @@ export default function Home() {
         </header>
       </div>
 
-      <section id="home" className="mx-auto w-full max-w-[1380px] px-2 pb-16 pt-14 sm:px-3 lg:px-4">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="text-center lg:text-left">
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Full-Stack Developer</p>
-            <Link href="/north-attleboro-software-developer" className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#1b3565] transition hover:text-[#2e7afe]">
-              <span className="h-2 w-2 rounded-full bg-[#2e7afe]" /> Based in North Attleboro, Massachusetts
-            </Link>
-            <h1 className="display-heading-large mx-auto mt-5 max-w-xl text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[#0f172a] sm:text-6xl lg:mx-0">
-              <TypewriterHeading text="Building Reliable Software That Drives Results" />
-            </h1>
-            <p className="mx-auto mt-6 max-w-xl text-xl leading-9 text-slate-600 lg:mx-0">
-              I help businesses turn ideas into powerful web and mobile apps with clean code, scalable architecture,
-              and great user experiences.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-8 lg:justify-start">
-              <a
-                href="#projects"
-                className="rounded-lg bg-[#2e7afe] px-6 py-3 text-base font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.35)] transition hover:bg-[#1968ef]"
-              >
-                View My Work
-              </a>
-            </div>
-          </div>
-
-          <div className="relative rounded-[24px] border border-blue-100/70 bg-white p-3 shadow-[0_18px_50px_rgba(20,48,99,0.15)]">
-            <div className="relative overflow-hidden rounded-[18px] bg-[#f6f9ff] p-4">
-              <Image
-                src={heroImage}
-                alt="Dashboard on laptop and phone"
-                width={900}
-                height={560}
-                className="h-auto w-full"
-                priority
-              />
-            </div>
-          </div>
+      <section id="home" className="relative isolate overflow-hidden bg-[#081c36] pb-20 pt-12 text-white max-[576px]:pb-[3.2rem] sm:pt-16 lg:pt-20">
+        <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+          <div className="absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#2e7afe]/20 blur-3xl" />
+          <div className="absolute -right-24 top-0 h-[30rem] w-[30rem] rounded-full bg-cyan-400/10 blur-3xl" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:52px_52px] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
         </div>
 
-        <div className="mt-14 grid gap-5 rounded-[18px] border border-blue-100 bg-white px-5 py-7 shadow-[0_10px_30px_rgba(15,23,42,0.06)] sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
-            <article key={service.title} className="flex items-start gap-3">
-              <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#2e7afe]">
-                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                  <path d="M4 10h12M10 4v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                </svg>
+        <div className="mx-auto w-full max-w-[1380px] px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:gap-12 xl:gap-20">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-blue-300/25 bg-blue-300/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-200">
+                <span className="h-2 w-2 rounded-full bg-[#4a93ff] shadow-[0_0_14px_rgba(74,147,255,0.9)]" />
+                Full-Stack Developer
               </div>
-              <div>
-                <h3 className="text-base font-semibold text-slate-900">{service.title}</h3>
-                <p className="mt-1 text-sm text-slate-500">{service.description}</p>
+              <Link href="/north-attleboro-software-developer" className="mx-auto mt-4 flex w-fit items-center gap-2 text-sm font-semibold text-blue-100/75 transition hover:text-white lg:mx-0">
+                Based in North Attleboro, Massachusetts
+                <span aria-hidden="true">↗</span>
+              </Link>
+              <h1 className="display-heading-large mx-auto mt-6 max-w-2xl text-5xl font-extrabold leading-[1.02] tracking-[-0.04em] text-white sm:text-6xl lg:mx-0">
+                <TypewriterHeading text="Building Reliable Software That Drives Results" />
+              </h1>
+              <p className="mx-auto mt-7 max-w-xl text-xl leading-9 text-blue-100/80 max-[576px]:text-[1.125rem] max-[576px]:leading-[1.9125rem] lg:mx-0">
+                Turn ideas into powerful web and mobile apps with clean code, scalable architecture,
+                and great user experiences.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+                <a
+                  href="#projects"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#2e7afe] px-6 py-3 text-base font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.4)] transition hover:-translate-y-0.5 hover:bg-[#4a93ff]"
+                >
+                  View My Work <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-white transition hover:border-white/35 hover:bg-white/10"
+                >
+                  Start a Conversation
+                </a>
               </div>
-            </article>
-          ))}
+              <div className="mt-9 flex items-center justify-center gap-6 text-left lg:justify-start">
+                <div>
+                  <p className="text-2xl font-extrabold text-white">5+</p>
+                  <p className="text-xs font-medium text-blue-200/70">Years building</p>
+                </div>
+                <div className="h-9 w-px bg-white/15" />
+                <div>
+                  <p className="text-2xl font-extrabold text-white">Top 1%</p>
+                  <p className="text-xs font-medium text-blue-200/70">Upwork talent</p>
+                </div>
+                <div className="h-9 w-px bg-white/15" />
+                <div>
+                  <p className="text-2xl font-extrabold text-white">100%</p>
+                  <p className="text-xs font-medium text-blue-200/70">Job success</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-3xl lg:mx-0">
+              <div className="absolute -inset-5 rounded-[36px] bg-gradient-to-br from-[#2e7afe]/25 via-transparent to-cyan-300/15 blur-2xl" aria-hidden="true" />
+              <div className="relative overflow-hidden rounded-[26px] border border-white/15 bg-white/10 p-2.5 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm transition duration-500 lg:rotate-[1deg] lg:hover:rotate-0">
+                <div className="flex h-10 items-center justify-between rounded-t-[18px] border-b border-slate-200 bg-white px-4">
+                  <div className="flex gap-1.5" aria-hidden="true">
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                  </div>
+                  <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-slate-400">Built for the real world</span>
+                  <span className="h-2 w-8 rounded-full bg-slate-100" aria-hidden="true" />
+                </div>
+                <div className="overflow-hidden rounded-b-[18px] bg-[#f6f9ff] p-3 sm:p-5">
+                  <Image
+                    src={heroImage}
+                    alt="Dashboard on laptop and phone"
+                    width={900}
+                    height={560}
+                    className="h-auto w-full"
+                    priority
+                  />
+                </div>
+              </div>
+              <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-xl border border-blue-100 bg-white px-4 py-3 text-left text-slate-900 shadow-[0_16px_36px_rgba(0,0,0,0.22)] sm:left-8">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="m5 10 3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p className="text-sm font-bold">Production-ready</p>
+                  <p className="text-xs text-slate-500">From idea to launch</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-20 grid overflow-hidden rounded-[20px] border border-white/10 bg-white shadow-[0_18px_50px_rgba(0,0,0,0.2)] sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service, index) => (
+              <article key={service.title} className="group flex items-start gap-3 border-blue-100 p-5 transition hover:bg-blue-50/70 sm:[&:nth-child(odd)]:border-r lg:border-r lg:last:border-r-0">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#eaf2ff] font-mono text-xs font-bold text-[#2e7afe] transition group-hover:bg-[#2e7afe] group-hover:text-white">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-1 text-sm text-slate-500">{service.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section id="about" className="scroll-reveal mx-auto w-full max-w-[1380px] px-2 pb-20 sm:px-3 lg:px-4">
+      <section id="about" className="scroll-reveal mx-auto w-full max-w-[1380px] px-2 pb-20 pt-20 max-[576px]:pb-16 max-[576px]:pt-[4.8rem] sm:px-3 lg:px-4">
         <div className="grid gap-8 rounded-[22px] border border-blue-100 bg-white p-6 shadow-[0_12px_34px_rgba(20,48,99,0.09)] md:p-8 min-[992px]:grid-cols-[0.72fr_1.28fr] lg:p-10">
           <div className="overflow-hidden rounded-[18px] border border-blue-100 bg-[#edf5ff]">
             <Image
@@ -263,13 +304,13 @@ export default function Home() {
           </div>
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">About Mark</p>
-            <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a]">Senior Full Stack Developer focused on real business outcomes.</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
+            <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">Senior Full Stack Developer focused on real business outcomes.</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
               Seeing your software vision come to life doesn't have to be a rocky road. Your ideas should come to life through communication, ownership, and clean maintainable code. 
               With over 5 years of professional experience, I've helped clients bring their designs and ideas to MVP's, and production-ready applications with a great UI/UX.
             </p>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Based in North Attleboro, Massachusetts, I work with businesses locally, across New England, and throughout the United States. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
+            <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
+              Based in North Attleboro, Massachusetts, I work with businesses locally, across New England, and throughout the US. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
               <div className="rounded-xl bg-[#f6f9ff] p-4">
@@ -289,19 +330,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="scroll-reveal w-full bg-white py-20">
+      <section id="projects" className="scroll-reveal w-full bg-white py-20 max-[576px]:py-16">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Selected Projects</p>
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Projects</p>
             <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
               Software built around real-world needs
             </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              A selection of applications I have developed across reporting, computer vision, and collaborative education.
+            <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
+              A selection of applications I have developed across reporting, video features, and collaborative education.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+          <div className="mt-12 grid gap-8 max-[576px]:mt-[2.4rem] lg:grid-cols-3">
             {projects.map((project) => (
               <article
                 key={project.title}
@@ -333,77 +374,62 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="scroll-reveal w-full bg-[#081c36] py-20 text-white">
-        <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-300">Services</p>
-              <h2 className="display-heading mt-4 max-w-2xl text-4xl font-extrabold tracking-[-0.03em] sm:text-5xl">
-                Technical expertise from first idea to finished product
-              </h2>
-            </div>
-            <p className="max-w-2xl text-lg leading-8 text-blue-100 lg:justify-self-end">
-              Whether you need a new product, a focused feature, or a stronger foundation for existing software, I can step in at any stage and move the work forward.
-              I support businesses in North Attleboro and across Massachusetts, along with remote teams throughout New England and the United States.
+      <section id="services" aria-labelledby="services-heading" className="scroll-reveal w-full bg-[#081c36] py-20 text-white max-[576px]:py-16 lg:py-24">
+        <div className="mx-auto grid w-full max-w-[1380px] gap-12 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-4">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-300">Services</p>
+            <h2 id="services-heading" className="display-heading mt-5 max-w-lg text-4xl font-extrabold leading-[1.12] tracking-[-0.03em] sm:text-5xl">
+              New ideas.<br />
+              Better software.<br />
+              <span className="text-blue-300">A clear way forward.</span>
+            </h2>
+            <p className="mt-6 max-w-md text-lg leading-8 text-blue-100/80 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
+              Launch something new or improve what you already have. Get hands-on development and practical technical guidance, shaped around your project.
+            </p>
+            <a
+              href="#contact"
+              className="mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-lg bg-[#2e7afe] px-6 py-3 font-semibold text-white transition hover:bg-[#1968ef] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
+            >
+              Let’s talk about your project
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+            <p className="mt-6 max-w-sm text-sm leading-6 text-blue-200/70">
+              Based in North Attleboro, Massachusetts.<br />
+              Working with teams across New England and the US.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden rounded-[22px] border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="border-t border-white/15">
             {detailedServices.map((service) => (
-              <article key={service.title} className="service-stagger group bg-[#0b2342] p-7 transition hover:bg-[#102d53] sm:p-8">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold tracking-[0.16em] text-blue-300">{service.number}</span>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-300/30 text-blue-200 transition group-hover:border-blue-300 group-hover:bg-[#2e7afe] group-hover:text-white">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                      <path d="M5 15 15 5M8 5h7v7" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-                <h3 className="mt-7 text-2xl font-bold tracking-[-0.02em]">{service.title}</h3>
-                <p className="mt-4 leading-7 text-blue-100/80">{service.description}</p>
-                <ul className="mt-6 space-y-3 border-t border-white/10 pt-5">
-                  {service.deliverables.map((deliverable) => (
-                    <li key={deliverable} className="flex items-center gap-3 text-sm font-medium text-blue-50">
-                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#4a93ff]" />
-                      {deliverable}
-                    </li>
-                  ))}
-                </ul>
+              <article key={service.category} className="border-b border-white/15 py-7 first:pt-7 lg:py-8">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-300">{service.category}</p>
+                <h3 className="mt-3 text-2xl font-bold leading-snug tracking-[-0.02em] sm:text-[1.65rem]">{service.title}</h3>
+                <p className="mt-3 max-w-2xl leading-7 text-blue-100/80">{service.description}</p>
+                <p className="mt-4 text-sm font-medium leading-6 text-blue-200">{service.examples}</p>
               </article>
             ))}
-          </div>
-
-          <div className="mt-10 flex flex-col gap-5 rounded-[18px] border border-blue-300/20 bg-white/[0.06] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
-            <div>
-              <h3 className="text-xl font-bold">Have a project that does not fit neatly into a category?</h3>
-              <p className="mt-2 text-blue-100/80">Tell me what you are trying to accomplish, and I will help identify the right approach.</p>
-            </div>
-            <a
-              href="#contact"
-              className="inline-flex h-12 shrink-0 items-center justify-center rounded-lg bg-[#2e7afe] px-6 font-semibold text-white shadow-[0_12px_28px_rgba(46,122,254,0.35)] transition hover:bg-[#1968ef]"
-            >
-              Discuss Your Project
-            </a>
           </div>
         </div>
       </section>
 
-      <section id="testimonials" className="scroll-reveal w-full bg-[#f5f8ff] py-20">
+      <section id="testimonials" className="scroll-reveal w-full bg-[#f5f8ff] py-20 max-[576px]:py-16">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div className="grid gap-8 max-[576px]:gap-[1.6rem] lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Client Testimonials</p>
               <h2 className="display-heading mt-4 max-w-2xl text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
-                Trusted for the work—and the way I work
+                Delivering software the way it should be for years
               </h2>
             </div>
-            <p className="max-w-2xl text-lg leading-8 text-slate-600 lg:justify-self-end">
-              Long-term clients count on me to learn quickly, communicate clearly, adapt as requirements evolve, and deliver dependable software.
+            <p className="max-w-2xl text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem] lg:justify-self-end">
+              Long-term clients should expect clear communication, quick solutions, adapting as requirements evolve, and delivering great software.
             </p>
           </div>
 
-          <div className="mt-12 overflow-hidden rounded-[24px] border border-blue-100 bg-white shadow-[0_16px_42px_rgba(20,48,99,0.09)]">
-            <article className="grid gap-4 bg-[#0b2342] p-7 text-white sm:p-10 lg:grid-cols-[0.35fr_1.65fr] lg:gap-3 lg:p-12">
+          <div className="mt-12 overflow-hidden rounded-[24px] border border-blue-100 bg-white shadow-[0_16px_42px_rgba(20,48,99,0.09)] max-[576px]:mt-[2.4rem]">
+            <article className="grid gap-4 bg-[#0b2342] p-7 text-white sm:p-10 lg:grid-cols-[0.35fr_3.25fr] lg:gap-3 lg:p-12">
               <div className="flex items-start">
                 <span className="font-serif text-7xl leading-none text-[#4a93ff]" aria-hidden="true">“</span>
               </div>
@@ -435,7 +461,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="blog" className="scroll-reveal w-full bg-white py-20">
+      <section id="blog" className="scroll-reveal w-full bg-white py-20 max-[576px]:py-16">
         <div className="mx-auto w-full max-w-[1380px] px-2 sm:px-3 lg:px-4">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-3xl">
@@ -443,7 +469,7 @@ export default function Home() {
               <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">
                 Practical notes on building better software
               </h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600">
+              <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
                 Lessons from developing production web, mobile, backend, and real-time applications for growing businesses.
               </p>
             </div>
@@ -471,7 +497,7 @@ export default function Home() {
                   {featuredPost.title}
                 </Link>
               </h3>
-              <p className="mt-5 text-lg leading-8 text-slate-600">{featuredPost.description}</p>
+              <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">{featuredPost.description}</p>
               <Link href={`/blog/${featuredPost.slug}`} className="mt-7 inline-flex items-center gap-2 font-bold text-[#2e7afe] transition hover:text-[#1968ef]">
                 Read the article <span aria-hidden="true">→</span>
               </Link>
@@ -480,20 +506,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="w-full bg-[#081c36] py-14 text-white">
+      <section id="contact" className="w-full bg-[#081c36] py-14 text-white max-[576px]:pt-[2.8rem]">
         <div className="mx-auto grid w-full max-w-[1380px] gap-10 px-2 sm:px-3 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-4">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-200">Contact</p>
             <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em]">Ready to build your next product?</h2>
-            <p className="mt-4 text-lg leading-8 text-blue-100">
+            <p className="mt-4 text-lg leading-8 text-blue-100 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
               Send a message with your project goals and I will help shape the best technical plan.
             </p>
             <div className="mt-6 flex flex-col flex-wrap gap-3 text-blue-100 sm:flex-row sm:gap-x-8">
               <Link href="/north-attleboro-software-developer" className="inline-flex items-center gap-2 transition hover:text-white">
                 <span className="font-semibold text-white">Location:</span> North Attleboro, MA
               </Link>
-              <a href="mailto:MarkMGill@yahoo.com" className="inline-flex items-center gap-2 transition hover:text-white">
-                <span className="font-semibold text-white">Email:</span> MarkMGill@yahoo.com
+              <a href="mailto:info@gillsoftwaresolutions.com" className="inline-flex items-center gap-2 transition hover:text-white">
+                <span className="font-semibold text-white">Email:</span> info@gillsoftwaresolutions.com
               </a>
               <a href="tel:+14015756936" className="inline-flex items-center gap-2 transition hover:text-white">
                 <span className="font-semibold text-white">Phone:</span> 401-575-6936
