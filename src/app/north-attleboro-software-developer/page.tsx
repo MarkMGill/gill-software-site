@@ -148,7 +148,7 @@ export default function NorthAttleboroDeveloperPage() {
       <section className="bg-[#081c36] px-4 py-14 text-white sm:px-6">
         <div className="mx-auto flex max-w-[1080px] flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div><h2 className="text-3xl font-extrabold">Let&apos;s build something useful.</h2><p className="mt-3 text-blue-100">Based in North Attleboro, MA. Available for local and remote software projects.</p></div>
-          <a href="mailto:MarkMGill@yahoo.com" className="inline-flex h-12 items-center justify-center rounded-lg bg-[#2e7afe] px-6 font-bold">MarkMGill@yahoo.com</a>
+          <a href="mailto:info@gillsoftwaresolutions.com" className="inline-flex h-12 items-center justify-center rounded-lg bg-[#2e7afe] px-6 font-bold">info@gillsoftwaresolutions.com</a>
         </div>
       </section>
     </main>

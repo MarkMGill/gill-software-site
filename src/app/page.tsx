@@ -135,7 +135,7 @@ export default function Home() {
         "@id": `${siteConfig.url}/#organization`,
         name: siteConfig.name,
         url: siteConfig.url,
-        email: "MarkMGill@yahoo.com",
+        email: "info@gillsoftwaresolutions.com",
         telephone: "+1-401-575-6936",
         address: {
           "@type": "PostalAddress",
@@ -518,8 +518,8 @@ export default function Home() {
               <Link href="/north-attleboro-software-developer" className="inline-flex items-center gap-2 transition hover:text-white">
                 <span className="font-semibold text-white">Location:</span> North Attleboro, MA
               </Link>
-              <a href="mailto:MarkMGill@yahoo.com" className="inline-flex items-center gap-2 transition hover:text-white">
-                <span className="font-semibold text-white">Email:</span> MarkMGill@yahoo.com
+              <a href="mailto:info@gillsoftwaresolutions.com" className="inline-flex items-center gap-2 transition hover:text-white">
+                <span className="font-semibold text-white">Email:</span> info@gillsoftwaresolutions.com
               </a>
               <a href="tel:+14015756936" className="inline-flex items-center gap-2 transition hover:text-white">
                 <span className="font-semibold text-white">Phone:</span> 401-575-6936

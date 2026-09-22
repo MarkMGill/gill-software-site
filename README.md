@@ -26,8 +26,8 @@ The contact form posts to `src/app/api/contact/route.ts` and delivers mail throu
 
 ```env
 RESEND_API_KEY=your_resend_api_key
-CONTACT_TO_EMAIL=MarkMGill@yahoo.com
-CONTACT_FROM_EMAIL="Gill Software Solutions <contact@your-verified-domain.com>"
+CONTACT_TO_EMAIL=info@gillsoftwaresolutions.com
+CONTACT_FROM_EMAIL=Gill Software Solutions <info@gillsoftwaresolutions.com>
 ```
 
 For initial Resend testing, `Gill Software Solutions <onboarding@resend.dev>` can be used as the sender. Before production, verify your business domain in Resend and use an address on that domain. Keep the API key server-side and add the same variables to the deployment environment.
