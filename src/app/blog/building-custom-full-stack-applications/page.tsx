@@ -9,7 +9,7 @@ import ReadingProgress from "../../../components/reading-progress";
 const articleUrl = `/blog/${featuredPost.slug}`;
 
 export const metadata: Metadata = {
-  title: "Building Reliable Full-Stack Applications That Scale",
+  title: "Building Custom Full-Stack Applications That Scale",
   description: featuredPost.description,
   keywords: ["full-stack application development", "React", "Next.js", "React Native", "Node.js", "TypeScript", "API development", "software architecture"],
   alternates: { canonical: articleUrl },
@@ -68,7 +68,7 @@ export default function ArticlePage() {
 
         <div className="prose mx-auto max-w-[760px] px-4 py-16 text-[17px] leading-8 text-slate-700 sm:px-6">
           <p className="text-xl leading-9 text-slate-700">
-            Reliable software is not defined by a framework or a clever technical shortcut. It is software that helps people complete important work, remains understandable as the product evolves, and gives the business room to grow. As a senior full-stack developer, I build that reliability across the entire product—from the React interface to the Node.js API, database, mobile experience, and deployment architecture.
+            Custom software is not defined by a framework or a clever technical shortcut. It is software that helps people complete important work, remains understandable as the product evolves, and gives the business room to grow. As a senior full-stack developer, I build that reliability across the entire product—from the React interface to the Node.js API, database, mobile experience, and deployment architecture.
           </p>
 
           <h2>Start with the business problem, not the technology</h2>
