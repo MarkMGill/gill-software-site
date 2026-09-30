@@ -125,7 +125,7 @@ export default function Home() {
         name: "Mark Gill",
         url: siteConfig.url,
         jobTitle: "Senior Full-Stack Developer",
-        homeLocation: { "@type": "Place", name: "North Attleboro, Massachusetts" },
+        homeLocation: { "@type": "Place", name: "Southern Massachusetts" },
         sameAs: ["https://www.linkedin.com/in/mark-gill-1705b567/"],
         worksFor: { "@id": `${siteConfig.url}/#organization` },
         knowsAbout: ["React", "Next.js", "React Native", "Node.js", "TypeScript", "API development", "Full-stack development"],
@@ -139,11 +139,10 @@ export default function Home() {
         telephone: "+1-401-575-6936",
         address: {
           "@type": "PostalAddress",
-          addressLocality: "North Attleboro",
           addressRegion: "MA",
           addressCountry: "US",
         },
-        areaServed: ["North Attleboro", "Massachusetts", "New England", "United States"],
+        areaServed: ["Southern Massachusetts", "Rhode Island", "Boston", "Providence", "Massachusetts", "New England", "United States", "Worldwide"],
         sameAs: ["https://www.linkedin.com/in/mark-gill-1705b567/"],
       },
     ],
@@ -195,12 +194,12 @@ export default function Home() {
                 <span className="h-2 w-2 rounded-full bg-[#4a93ff] shadow-[0_0_14px_rgba(74,147,255,0.9)]" />
                 Full-Stack Developer
               </div>
-              <Link href="/north-attleboro-software-developer" className="mx-auto mt-4 flex w-fit items-center gap-2 text-sm font-semibold text-blue-100/75 transition hover:text-white lg:mx-0">
-                Based in North Attleboro, Massachusetts
+              <Link href="/southern-massachusetts-rhode-island-software-developer" className="mx-auto mt-4 flex w-fit items-center gap-2 text-sm font-semibold text-blue-100/75 transition hover:text-white lg:mx-0">
+                Based in Southern Massachusetts
                 <span aria-hidden="true">↗</span>
               </Link>
               <h1 className="display-heading-large mx-auto mt-6 max-w-2xl text-5xl font-extrabold leading-[1.02] tracking-[-0.04em] text-white sm:text-6xl lg:mx-0">
-                <TypewriterHeading text="Building Reliable Software That Drives Results" />
+                <TypewriterHeading text="Building Custom Software That Drives Results" />
               </h1>
               <p className="mx-auto mt-7 max-w-xl text-xl leading-9 text-blue-100/80 max-[576px]:text-[1.125rem] max-[576px]:leading-[1.9125rem] lg:mx-0">
                 Turn ideas into powerful web and mobile apps with clean code, scalable architecture,
@@ -306,11 +305,11 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">About Mark</p>
             <h2 className="display-heading mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#0f172a] sm:text-5xl">Senior Full Stack Developer focused on real business outcomes.</h2>
             <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
-              Seeing your software vision come to life doesn't have to be a rocky road. Your ideas should come to life through communication, ownership, and clean maintainable code. 
-              With over 5 years of professional experience, I've helped clients bring their designs and ideas to MVP's, and production-ready applications with a great UI/UX.
+              Seeing your software vision come to life doesn&apos;t have to be a rocky road. Your ideas should come to life through communication, ownership, and clean maintainable code.
+              With over 5 years of professional experience, I&apos;ve helped clients bring their designs and ideas to MVPs, and production-ready applications with a great UI/UX.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-600 max-[576px]:text-[1.0125rem] max-[576px]:leading-[1.7rem]">
-              Based in North Attleboro, Massachusetts, I work with businesses locally, across New England, and throughout the US. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
+              Based in Southern Massachusetts, I work with businesses across the U.S. and worldwide. I also welcome local projects from Massachusetts and Rhode Island, including Boston and Providence. My core stack is React, React Native, Next.js, Node.js, and TypeScript.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
               <div className="rounded-xl bg-[#f6f9ff] p-4">
@@ -396,8 +395,8 @@ export default function Home() {
               </svg>
             </a>
             <p className="mt-6 max-w-sm text-sm leading-6 text-blue-200/70">
-              Based in North Attleboro, Massachusetts.<br />
-              Working with teams across New England and the US.
+              Based in Southern Massachusetts.<br />
+              Available to work with teams across the U.S. and worldwide.
             </p>
           </div>
 
@@ -515,8 +514,8 @@ export default function Home() {
               Send a message with your project goals and I will help shape the best technical plan.
             </p>
             <div className="mt-6 flex flex-col flex-wrap gap-3 text-blue-100 sm:flex-row sm:gap-x-8">
-              <Link href="/north-attleboro-software-developer" className="inline-flex items-center gap-2 transition hover:text-white">
-                <span className="font-semibold text-white">Location:</span> North Attleboro, MA
+              <Link href="/southern-massachusetts-rhode-island-software-developer" className="inline-flex items-center gap-2 transition hover:text-white">
+                <span className="font-semibold text-white">Location:</span> Southern Massachusetts
               </Link>
               <a href="mailto:info@gillsoftwaresolutions.com" className="inline-flex items-center gap-2 transition hover:text-white">
                 <span className="font-semibold text-white">Email:</span> info@gillsoftwaresolutions.com

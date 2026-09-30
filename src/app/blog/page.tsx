@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/blog",
     title: "Software Development Blog | Mark Gill",
-    description: "Practical insights on building reliable web, mobile, and backend software.",
+    description: "Practical insights on building custom web, mobile, and backend software.",
   },
 };
 
@@ -35,7 +35,7 @@ export default function BlogPage() {
         <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#2e7afe]">Gill Software Solutions</p>
         <h1 className="display-heading-large mt-4 text-5xl font-extrabold tracking-[-0.04em] text-[#0f172a] sm:text-6xl">Software Development Blog</h1>
         <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-600">
-          Practical perspectives on full-stack engineering, product development, and creating reliable software that solves real business problems.
+          Practical perspectives on full-stack engineering, product development, and creating custom software that solves real business problems.
         </p>
 
         <div className="mt-14">

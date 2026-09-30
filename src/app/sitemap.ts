@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${siteConfig.url}/north-attleboro-software-developer`,
+      url: `${siteConfig.url}/southern-massachusetts-rhode-island-software-developer`,
       lastModified: featuredPost.publishedAt,
       changeFrequency: "monthly",
       priority: 0.9,

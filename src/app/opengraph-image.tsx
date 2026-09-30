@@ -22,7 +22,7 @@ export default function OpenGraphImage() {
       <div style={{ display: "flex", fontSize: 28, color: "#7fb2ff", fontWeight: 700 }}>GILL SOFTWARE SOLUTIONS</div>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div style={{ display: "flex", maxWidth: 940, fontSize: 68, lineHeight: 1.08, fontWeight: 800 }}>
-          Reliable software built for real business results.
+          Custom software built for real business results.
         </div>
         <div style={{ display: "flex", marginTop: 32, fontSize: 28, color: "#c9dcf7" }}>
           Mark Gill · Senior Full-Stack Developer
