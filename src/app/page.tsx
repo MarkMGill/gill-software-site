@@ -111,7 +111,7 @@ const testimonials = [
   {
     project: "Praveen - InterviewWorks",
     quote:
-      "Mark ramped up quick on the project requirements and completed all deliverables. Will definitely hire him back once there is an opportunity. His strong points are attention to detail, communication and follow-up. Good luck Mark with your next projects!",
+      "Mark ramped up quick on the project requirements and completed all deliverables. Will definitely hire him for future projects. His strong points are attention to detail, communication and follow-up. Good luck Mark with your next projects!",
   },
 ];
 
